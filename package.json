@@ -1,0 +1,39 @@
+{
+  "name": "bitgoeul-fashion-week",
+  "version": "1.0.0",
+  "description": "Bitgoeul Fashion Week 2025 - Designer Showcase Website",
+  "main": "index.html",
+  "scripts": {
+    "dev": "live-server --port=3000 --open=index.html",
+    "build": "npm run build:css && npm run build:js",
+    "build:css": "echo 'CSS build completed'",
+    "build:js": "echo 'JS build completed'",
+    "lint": "echo 'Linting completed'",
+    "format": "prettier --write \"src/**/*.{html,css,js}\"",
+    "serve": "python -m http.server 8000"
+  },
+  "keywords": [
+    "fashion",
+    "design",
+    "showcase",
+    "bitgoeul",
+    "designer",
+    "portfolio"
+  ],
+  "author": "Bitgoeul Team",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "prettier": "^2.8.8"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/bitgoeul-fashion-week.git"
+  },
+  "homepage": "https://your-org.github.io/bitgoeul-fashion-week"
+}

@@ -1,0 +1,84 @@
+/* ===== Designer Page Styles ===== */
+
+/* Content Section */
+.content-section {
+    margin-top: -100px;
+    position: relative;
+    background: var(--color-white);
+    padding: 0px 40px;
+    z-index: 2;
+}
+
+/* Section Title */
+.section-title {
+    font-family: var(--font-bold);
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+/* Designer Profile */
+.designer-profile {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+}
+
+.profile-image {
+    width: 200px;
+    height: 300px;
+    background-color: var(--color-gray-medium);
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+    border-radius: var(--radius-md);
+}
+
+.profile-text h3 {
+    font-family: var(--font-bold);
+    font-size: 22px;
+    margin: 0 0 10px 0;
+}
+
+.profile-text p {
+    font-family: var(--font-light);
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 900px;
+}
+
+/* Scroll Guide */
+.scroll-guide {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+    color: var(--color-gray-dark);
+}
+
+/* Bottom Labels */
+.bottom-labels {
+    background: var(--color-white);
+    text-align: center;
+    padding: var(--spacing-md) var(--spacing-sm);
+    font-family: var(--font-medium);
+    font-size: 1rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .content-section {
+        padding: 0px 20px;
+    }
+    
+    .designer-profile {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .profile-image {
+        width: 100%;
+        max-width: 300px;
+        height: 400px;
+    }
+}

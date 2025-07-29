@@ -1,0 +1,142 @@
+/* ===== Index Page Styles ===== */
+
+/* Hero Section */
+.hero-section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-white);
+    z-index: 500;
+}
+
+/* Content Section */
+.content-section {
+    margin-top: 80vh;
+    position: relative;
+    background: var(--color-white);
+    padding: 0px 40px;
+    z-index: 1001;
+}
+
+/* Video Section */
+.video-section {
+    background: var(--color-black);
+    color: var(--color-white);
+    text-align: center;
+    padding: var(--spacing-lg) var(--spacing-sm);
+}
+
+.video-section h2 {
+    font-family: var(--font-medium);
+    font-size: 2rem;
+}
+
+.video-section p {
+    margin-top: var(--spacing-xs);
+    font-family: var(--font-light);
+    font-size: 0.9rem;
+}
+
+.video-section video {
+    margin-top: var(--spacing-md);
+    width: 90%;
+    max-width: 800px;
+}
+
+/* Poster Section */
+.poster-section {
+    display: flex;
+    justify-content: center;
+    padding: var(--spacing-md);
+    background-color: var(--color-black);
+}
+
+.poster-section img.poster-img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: var(--radius-lg);
+}
+
+/* Designers Section */
+.designers-section {
+    background-color: var(--color-white);
+    padding: var(--spacing-lg) var(--spacing-sm);
+    text-align: center;
+}
+
+.designers-section h2 {
+    font-family: var(--font-bold);
+    font-size: 2.5rem;
+}
+
+/* Photo Section */
+.photo-section {
+    background: var(--color-black);
+    color: var(--color-green);
+    padding: var(--spacing-lg) var(--spacing-sm);
+    text-align: center;
+}
+
+.photo-section h3 {
+    font-family: var(--font-bold);
+    color: var(--color-white);
+    font-size: 2rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.photo-grid div {
+    background-color: var(--color-gray-light);
+    aspect-ratio: 1 / 1;
+    border: 1px solid var(--color-gray-medium);
+    border-radius: var(--radius-md);
+}
+
+.photo-grid img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Contact Section */
+.contact-section {
+    background: var(--color-black);
+    padding: var(--spacing-xl) var(--spacing-sm);
+    text-align: center;
+    color: var(--color-white);
+}
+
+.contact-section h3 {
+    font-family: var(--font-medium);
+    color: var(--color-primary);
+    font-size: 1.6rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.contact-section .subtitle {
+    font-family: var(--font-light);
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
+}
+
+/* Bottom Labels */
+.bottom-labels {
+    background: var(--color-white);
+    text-align: center;
+    padding: var(--spacing-md) var(--spacing-sm);
+    font-family: var(--font-medium);
+    font-size: 1rem;
+}

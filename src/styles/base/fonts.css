@@ -1,0 +1,21 @@
+/* ===== Custom Fonts ===== */
+@font-face {
+    font-family: 'BitgoeulBold';
+    src: url('../../assets/fonts/bitgoeulGwangju_Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'BitgoeulMedium';
+    src: url('../../assets/fonts/bitgoeulGwangju_Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'BitgoeulLight';
+    src: url('../../assets/fonts/bitgoeulGwangju_Light.ttf') format('truetype');
+    font-weight: 300;
+    font-display: swap;
+}
