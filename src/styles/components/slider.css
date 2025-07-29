@@ -16,9 +16,9 @@
     transition: var(--transition-normal);
 }
 
-.slider-images {
+.collection-slider .slider-images {
     display: flex;
-    gap: 60px;
+    gap: 20px;
     transition: var(--transition-normal);
 }
 
@@ -48,7 +48,7 @@
 
 .designers-section .card {
     flex: 0 0 calc((100% - 80px) / 3);
-    height: 550px;
+    height: 660px;
     background-size: cover;
     background-position: center;
     border-radius: var(--radius-lg);
@@ -73,22 +73,24 @@
 /* Designer Page Slider */
 .collection-slider {
     position: relative;
-    width: 100%;
-    max-width: 1300px;
-    margin: 0 auto;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: var(--color-white);
 }
 
 .collection-slider .slider-frame {
-    width: calc((610px + 60px) * 2 - 60px);
+    width: calc(100vw - 300px);
     overflow: hidden;
 }
 
 .collection-slider .slide-image {
-    flex: 0 0 610px;
-    height: 680px;
+    flex: 0 0 calc((100vw - 300px - 20px) / 2);
+    height: 95vh;
+    min-height: 700px;
 }
 
 .collection-slider .slide-image img {
@@ -98,20 +100,32 @@
 }
 
 .collection-slider .arrow {
-    position: relative;
-    background: var(--color-white);
-    border: 1px solid var(--color-black);
-    width: 40px;
+    position: absolute;
+    background: transparent;
+    border: none;
+    width: 80px;
     height: 80px;
-    font-size: 24px;
+    font-size: 4rem;
+    color: var(--color-black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: var(--transition-fast);
+}
+
+.collection-slider .arrow:hover {
+    transform: scale(1.2);
+    opacity: 0.7;
 }
 
 .collection-slider .arrow.left {
-    left: -10px;
+    left: 50px;
 }
 
 .collection-slider .arrow.right {
-    right: -10px;
+    right: 50px;
 }
 
 /* Responsive */
@@ -122,12 +136,13 @@
     
     .designers-section .card {
         flex: 0 0 90%;
-        height: 400px;
+        height: 480px;
     }
     
     .collection-slider .slide-image {
-        flex: 0 0 90%;
-        height: 400px;
-        min-width: 100%;
+        flex: 0 0 90vw;
+        height: 70vh;
+        min-height: 400px;
+        min-width: 90vw;
     }
 }

@@ -14,53 +14,74 @@
     <link rel="stylesheet" href="src/styles/components/slider.css">
     <link rel="stylesheet" href="src/styles/pages/designer.css">
 </head>
-<body>
-    <!-- Header -->
-    <header class="hero-header">
-        <div class="header-row">
-            <!-- Hamburger Menu -->
-            <div class="hamburger-wrapper">
-                <button class="hamburger" id="hamburgerBtn">☰</button>
-                <ul class="dropdown-menu" id="dropdownMenu">
-                    <li><a href="index.html">홈</a></li>
-                    <li><a href="#">소개</a></li>
-                    <li><a href="baco.html">디자이너</a></li>
-                    <li><a href="#">문의</a></li>
-                </ul>
-            </div>
+<body class="scroll-snap-container">
+    <!-- First Section: Header + Hero + Designer Info -->
+    <section class="scroll-section hero-designer-section">
+        <!-- Header -->
+        <header class="common-header">
+            <div class="header-row">
+                <!-- Hamburger Menu -->
+                <div class="hamburger-wrapper">
+                    <button class="hamburger" id="hamburgerBtn">☰</button>
+                    <ul class="dropdown-menu" id="dropdownMenu">
+                        <li><a href="index.html">홈</a></li>
+                        <li><a href="#">소개</a></li>
+                        <li class="has-submenu">
+                            <a href="brand.html" class="brand-menu">BRAND</a>
+                            <ul class="submenu">
+                                <li class="has-submenu">
+                                    <a href="#" class="designers-menu">Designers</a>
+                                    <ul class="submenu">
+                                        <li><a href="designer.html">BACO</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#">문의</a></li>
+                    </ul>
+                </div>
 
-            <!-- Corner Title -->
-            <div class="corner-title font-bold">
-                <div>BITGOEUL</div>
-                <div>FASHION</div>
-                <div>WEEK</div>
-            </div>
-        </div>
-        <h1 class="main-title">BITGOEUL FASHION WEEK</h1>
-    </header>
-
-    <!-- Main Content -->
-    <main class="content-section">
-        <!-- Designer Info Section -->
-        <section class="designer-info">
-            <h2 class="section-title font-bold">DESIGNERS 2025</h2>
-            <div class="designer-profile">
-                <img class="profile-image" src="src/assets/images/designers/baco/FT1_4458s.jpg" alt="Baco92 Profile">
-                <div class="profile-text">
-                    <h3 class="font-bold">Baco92</h3>
-                    <p class="font-light">
-                        baco92's philosophy culminates in the creation of a new, deconstructed RTW (Ready-To-Wear) 
-                        by seamlessly blending tailoring, streetwear, and couture techniques. Beyond mere wearability, 
-                        the core intention behind our designs is to stimulate contemporary society by presenting garments 
-                        imbued with specific memories and concepts from the past. This approach not only allows the clothing 
-                        itself to embody profound meaning but also aims to forge a more provocative and impactful modern apparel.
-                    </p>
+                <!-- Corner Title -->
+                <div class="corner-title font-bold">
+                    <div>BITGOEUL</div>
+                    <div>FASHION</div>
+                    <div>WEEK</div>
                 </div>
             </div>
-        </section>
+        </header>
+        <div class="hero-section">
+            <h1 class="main-title">BITGOEUL FASHION WEEK</h1>
+        </div>
+        
+        <!-- Main Content -->
+        <main class="content-section">
+            <!-- Designer Info Section -->
+            <section class="designer-info">
+                <h2 class="section-title font-bold">DESIGNERS 2025</h2>
+                <div class="designer-profile">
+                    <img class="profile-image" src="src/assets/images/designers/baco/FT1_4458s.jpg" alt="Baco92 Profile">
+                    <div class="profile-text">
+                        <div class="text-logo-container">
+                            <div class="text-content">
+                                <h3 class="font-bold">Baco92</h3>
+                                <p class="font-light">
+                                    baco92's philosophy culminates in the creation of a new, deconstructed RTW (Ready-To-Wear) 
+                                    by seamlessly blending tailoring, streetwear, and couture techniques. Beyond mere wearability, 
+                                    the core intention behind our designs is to stimulate contemporary society by presenting garments 
+                                    imbued with specific memories and concepts from the past. This approach not only allows the clothing 
+                                    itself to embody profound meaning but also aims to forge a more provocative and impactful modern apparel.
+                                </p>
+                            </div>
+                            <img class="brand-logo" src="src/assets/images/index/ONLYLOGOBLACK.png" alt="Bitgoeul Fashion Week Logo">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </section>
 
-        <!-- Collection Slider -->
-        <section class="collection-slider">
+    <!-- Second Section: Collection Slider -->
+    <section class="scroll-section collection-slider">
             <button class="arrow left">&#8249;</button>
             <div class="slider-frame">
                 <div class="slider-images">

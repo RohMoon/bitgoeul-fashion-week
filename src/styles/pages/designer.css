@@ -1,33 +1,94 @@
 /* ===== Designer Page Styles ===== */
 
+/* Base Font for Designer Page */
+body {
+    font-family: 'BitgoeulLight', sans-serif;
+}
+
+/* Header Override for Designer Page */
+.common-header {
+    position: relative;
+}
+
+.common-header .hamburger {
+    font-family: 'BitgoeulMedium', sans-serif;
+}
+
+.common-header .dropdown-menu li a {
+    font-family: 'BitgoeulMedium', sans-serif;
+}
+
+.common-header .corner-title {
+    font-family: 'BitgoeulBold', sans-serif;
+}
+
+/* Scroll Snap Container */
+.scroll-snap-container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+.scroll-section {
+    scroll-snap-align: start;
+    min-height: 100vh;
+}
+
+.hero-designer-section {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Hero Section Override for Designer Page */
+.hero-designer-section .hero-section {
+    position: relative;
+    height: auto;
+    padding: 2rem 0 1rem 0;
+    margin-top: 0;
+    flex-shrink: 0;
+}
+
+.hero-designer-section .hero-section .main-title {
+    transform: scaleY(2.5) scaleX(1.2);
+    margin-top: 0;
+    font-family: 'BitgoeulBold', sans-serif;
+}
+
 /* Content Section */
-.content-section {
-    margin-top: -100px;
+.hero-designer-section .content-section {
+    margin-top: 0;
     position: relative;
     background: var(--color-white);
-    padding: 0px 40px;
+    padding: 0 var(--spacing-lg);
     z-index: 2;
+    flex: 1;
+    display: flex;
+    align-items: center;
 }
 
 /* Section Title */
 .section-title {
-    font-family: var(--font-bold);
-    font-size: 24px;
-    margin-bottom: 40px;
+    font-family: 'BitgoeulBold', sans-serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: var(--spacing-sm);
 }
 
 /* Designer Profile */
 .designer-profile {
     display: flex;
     align-items: center;
-    gap: 40px;
+    justify-content: center;
+    gap: var(--spacing-lg);
     flex-wrap: wrap;
-    margin-bottom: 60px;
+    margin-bottom: var(--spacing-md);
+    text-align: center;
 }
 
 .profile-image {
-    width: 200px;
-    height: 300px;
+    width: 16rem;
+    height: 24rem;
     background-color: var(--color-gray-medium);
     background-size: cover;
     background-position: center;
@@ -35,25 +96,50 @@
     border-radius: var(--radius-md);
 }
 
+.text-logo-container {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+    justify-content: center;
+}
+
+.text-content {
+    flex: 1;
+}
+
 .profile-text h3 {
-    font-family: var(--font-bold);
-    font-size: 22px;
-    margin: 0 0 10px 0;
+    font-family: 'BitgoeulBold', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0 0 var(--spacing-sm) 0;
 }
 
 .profile-text p {
-    font-family: var(--font-light);
-    font-size: 16px;
-    line-height: 1.6;
-    max-width: 900px;
+    font-family: 'BitgoeulLight', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.7;
+    max-width: 56.25rem;
+}
+
+.brand-logo {
+    width: 5rem;
+    height: auto;
+    flex-shrink: 0;
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 0.5rem;
+    border-radius: var(--radius-sm);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Scroll Guide */
 .scroll-guide {
     text-align: center;
-    margin-top: 30px;
-    font-size: 14px;
+    margin-top: var(--spacing-md);
+    font-size: 0.875rem;
     color: var(--color-gray-dark);
+    font-family: 'BitgoeulLight', sans-serif;
 }
 
 /* Bottom Labels */
@@ -61,14 +147,14 @@
     background: var(--color-white);
     text-align: center;
     padding: var(--spacing-md) var(--spacing-sm);
-    font-family: var(--font-medium);
+    font-family: 'BitgoeulMedium', sans-serif;
     font-size: 1rem;
 }
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
     .content-section {
-        padding: 0px 20px;
+        padding: 0 var(--spacing-sm);
     }
     
     .designer-profile {
@@ -78,7 +164,7 @@
     
     .profile-image {
         width: 100%;
-        max-width: 300px;
-        height: 400px;
+        max-width: 18.75rem;
+        height: 25rem;
     }
 }

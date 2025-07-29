@@ -1,155 +1,80 @@
 /**
  * Designer Page Slider Component
- * Handles the collection images slider with infinite scroll
+ * Simple slider with basic navigation
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-    const slider = document.querySelector('.slider-images');
-    const frame = document.querySelector('.slider-frame');
-    const slides = Array.from(document.querySelectorAll('.slide-image'));
-    const leftArrow = document.querySelector('.arrow.left');
-    const rightArrow = document.querySelector('.arrow.right');
+    console.log('Designer slider script loaded');
+    
+    const slider = document.querySelector('.collection-slider .slider-images');
+    const slides = Array.from(document.querySelectorAll('.collection-slider .slide-image'));
+    const leftArrow = document.querySelector('.collection-slider .arrow.left');
+    const rightArrow = document.querySelector('.collection-slider .arrow.right');
 
     if (!slider || !slides.length || !leftArrow || !rightArrow) {
         console.warn('Designer slider elements not found');
         return;
     }
 
-    const visibleSlides = getVisibleSlides();
-    const gap = 60;
-    const slideWidth = 610;
-    let currentIndex = visibleSlides;
-    let isTransitioning = false;
+    let currentIndex = 0;
+    const slidesToShow = 2; // 2개씩 보여줌
+    const maxIndex = Math.max(0, slides.length - slidesToShow);
 
-    function getVisibleSlides() {
-        return window.innerWidth <= 768 ? 1 : 2;
+    function getSlideWidth() {
+        return (window.innerWidth - 300 - 20) / 2;
     }
 
-    // Create clones for infinite scroll
-    function createClones() {
-        const clonesBefore = slides.slice(-visibleSlides).map(slide => {
-            const clone = slide.cloneNode(true);
-            clone.classList.add('clone');
-            return clone;
-        });
-
-        const clonesAfter = slides.slice(0, visibleSlides).map(slide => {
-            const clone = slide.cloneNode(true);
-            clone.classList.add('clone');
-            return clone;
-        });
-
-        clonesBefore.forEach(clone => slider.prepend(clone));
-        clonesAfter.forEach(clone => slider.appendChild(clone));
-    }
-
-    function setPosition(noTransition = false) {
-        if (isTransitioning) return;
-        
-        const offset = (slideWidth + gap) * currentIndex;
-        
-        if (noTransition) {
-            slider.style.transition = 'none';
-        } else {
-            slider.style.transition = 'transform 0.5s ease-in-out';
-        }
+    function updateSlider() {
+        const slideWidth = getSlideWidth();
+        const gap = 20;
+        const offset = currentIndex * (slideWidth + gap);
         
         slider.style.transform = `translateX(-${offset}px)`;
+        slider.style.transition = 'transform 0.3s ease-in-out';
+        
+        console.log('Slider updated:', { currentIndex, offset, slideWidth });
     }
 
     function nextSlide() {
-        if (isTransitioning) return;
-        
-        isTransitioning = true;
-        currentIndex++;
-        setPosition();
-
-        const totalSlides = document.querySelectorAll('.slide-image').length;
-        
-        if (currentIndex === totalSlides - visibleSlides) {
-            setTimeout(() => {
-                currentIndex = visibleSlides;
-                setPosition(true);
-                isTransitioning = false;
-            }, 500);
+        console.log('Next slide clicked, current:', currentIndex, 'max:', maxIndex);
+        if (currentIndex < maxIndex) {
+            currentIndex++;
         } else {
-            setTimeout(() => {
-                isTransitioning = false;
-            }, 500);
+            currentIndex = 0; // 끝에서 처음으로
         }
+        updateSlider();
     }
 
     function prevSlide() {
-        if (isTransitioning) return;
-        
-        isTransitioning = true;
-        currentIndex--;
-        setPosition();
-
-        const totalSlides = document.querySelectorAll('.slide-image').length;
-        
-        if (currentIndex === 0) {
-            setTimeout(() => {
-                currentIndex = totalSlides - visibleSlides * 2;
-                setPosition(true);
-                isTransitioning = false;
-            }, 500);
+        console.log('Prev slide clicked, current:', currentIndex);
+        if (currentIndex > 0) {
+            currentIndex--;
         } else {
-            setTimeout(() => {
-                isTransitioning = false;
-            }, 500);
+            currentIndex = maxIndex; // 처음에서 끝으로
         }
+        updateSlider();
     }
-
-    // Initialize
-    createClones();
-    setPosition(true);
 
     // Event listeners
-    rightArrow.addEventListener('click', nextSlide);
-    leftArrow.addEventListener('click', prevSlide);
-
-    // Keyboard navigation
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowLeft') {
-            prevSlide();
-        } else if (e.key === 'ArrowRight') {
-            nextSlide();
-        }
+    rightArrow.addEventListener('click', (e) => {
+        e.preventDefault();
+        console.log('Right arrow clicked');
+        nextSlide();
     });
+
+    leftArrow.addEventListener('click', (e) => {
+        e.preventDefault();
+        console.log('Left arrow clicked');
+        prevSlide();
+    });
+
+    // Initialize
+    updateSlider();
 
     // Handle resize
-    let resizeTimeout;
     window.addEventListener('resize', () => {
-        clearTimeout(resizeTimeout);
-        resizeTimeout = setTimeout(() => {
-            setPosition(true);
-        }, 250);
+        updateSlider();
     });
 
-    // Touch/swipe support for mobile
-    let startX = 0;
-    let endX = 0;
-
-    slider.addEventListener('touchstart', (e) => {
-        startX = e.touches[0].clientX;
-    });
-
-    slider.addEventListener('touchend', (e) => {
-        endX = e.changedTouches[0].clientX;
-        handleSwipe();
-    });
-
-    function handleSwipe() {
-        const swipeThreshold = 50;
-        const diff = startX - endX;
-
-        if (Math.abs(diff) > swipeThreshold) {
-            if (diff > 0) {
-                nextSlide();
-            } else {
-                prevSlide();
-            }
-        }
-    }
+    console.log('Slider initialized with', slides.length, 'slides');
 });

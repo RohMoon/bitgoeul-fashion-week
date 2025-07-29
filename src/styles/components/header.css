@@ -37,14 +37,14 @@
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: var(--color-white);
-    border: 1px solid var(--color-gray-medium);
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-light);
-    padding: var(--spacing-xs) 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    padding: 8px 0;
     min-width: 140px;
-    overflow: hidden;
-    z-index: var(--z-dropdown);
+    overflow: visible;
+    z-index: 999;
 }
 
 .dropdown-menu li a {
@@ -59,6 +59,53 @@
 .dropdown-menu li a:hover {
     background-color: var(--color-primary);
     color: var(--color-white);
+}
+
+/* Submenu Styles */
+.has-submenu {
+    position: relative;
+}
+
+.has-submenu:hover > .submenu {
+    display: block;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    padding: 8px 0;
+    min-width: 120px;
+    z-index: 9999;
+}
+
+.submenu li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    font-family: var(--font-medium);
+    font-size: 0.85rem;
+    color: #666;
+    transition: var(--transition-fast);
+}
+
+.submenu li a:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+/* Third Level Submenu - more specific selector */
+.submenu .has-submenu:hover > .submenu {
+    display: block;
+}
+
+.submenu .submenu {
+    left: 100%;
+    top: 0;
 }
 
 /* Corner Title */

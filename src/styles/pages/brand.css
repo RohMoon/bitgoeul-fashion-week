@@ -1,0 +1,167 @@
+/* ===== Brand Page Styles ===== */
+
+/* Base Font for Brand Page */
+body {
+    font-family: 'BitgoeulLight', sans-serif;
+}
+
+/* Header Override for Brand Page */
+.common-header {
+    position: relative;
+}
+
+.common-header .hamburger {
+    font-family: 'BitgoeulMedium', sans-serif;
+}
+
+.common-header .dropdown-menu li a {
+    font-family: 'BitgoeulMedium', sans-serif;
+}
+
+.common-header .corner-title {
+    font-family: 'BitgoeulBold', sans-serif;
+}
+
+/* Brand Section */
+.brand-section {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Hero Section Override for Brand Page */
+.brand-section .hero-section {
+    position: relative;
+    height: auto;
+    padding: 2rem 0 1rem 0;
+    margin-top: 0;
+    flex-shrink: 0;
+}
+
+.brand-section .hero-section .main-title {
+    transform: scaleY(2.5) scaleX(1.2);
+    margin-top: 0;
+    font-family: 'BitgoeulBold', sans-serif;
+}
+
+/* Content Section */
+.brand-section .content-section {
+    margin-top: 0;
+    position: relative;
+    background: var(--color-white);
+    padding: 0 var(--spacing-lg);
+    z-index: 2;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Section Title */
+.section-title {
+    font-family: 'BitgoeulBold', sans-serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: var(--spacing-sm);
+    text-align: center;
+}
+
+/* Brand List */
+.brand-list {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+}
+
+.list-header {
+    margin-bottom: var(--spacing-md);
+}
+
+.list-title {
+    font-family: 'BitgoeulBold', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: var(--spacing-lg);
+}
+
+/* Brand Grid */
+.brand-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.brand-item {
+    padding: var(--spacing-md);
+    border: 1px solid var(--color-gray-medium);
+    border-radius: var(--radius-md);
+    background: var(--color-white);
+    transition: var(--transition-fast);
+}
+
+.brand-item:hover {
+    background: var(--color-gray-light);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-light);
+}
+
+.brand-link {
+    font-family: 'BitgoeulMedium', sans-serif;
+    font-size: 1rem;
+    color: var(--color-black);
+    text-decoration: none;
+    display: block;
+    padding: var(--spacing-sm);
+}
+
+.brand-link:hover {
+    color: var(--color-primary);
+}
+
+/* Navigation Hint */
+.navigation-hint {
+    margin-top: var(--spacing-lg);
+}
+
+.navigation-hint p {
+    font-family: 'BitgoeulLight', sans-serif;
+    font-size: 0.9rem;
+    color: var(--color-gray-dark);
+}
+
+/* Bottom Labels */
+.bottom-labels {
+    background: var(--color-white);
+    text-align: center;
+    padding: var(--spacing-md) var(--spacing-sm);
+    font-family: 'BitgoeulMedium', sans-serif;
+    font-size: 1rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .brand-section .content-section {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .brand-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-sm);
+    }
+    
+    .brand-item {
+        padding: var(--spacing-sm);
+    }
+    
+    .brand-link {
+        font-size: 0.9rem;
+        padding: var(--spacing-xs);
+    }
+}
+
+@media (max-width: 480px) {
+    .brand-grid {
+        grid-template-columns: 1fr;
+    }
+}
