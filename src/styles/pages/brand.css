@@ -117,6 +117,7 @@ body {
 
 .brand-link:hover {
     color: var(--color-primary);
+    font-family: 'BitgoeulBold', sans-serif;
 }
 
 /* Navigation Hint */
