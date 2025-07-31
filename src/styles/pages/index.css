@@ -209,3 +209,53 @@
     align-items: center;
     justify-content: center;
 }
+
+/* 일반 모니터에서 인덱스 페이지 헤더 요소 크기 조정 */
+@media (max-width: 1920px) {
+    .common-header .hamburger {
+        font-size: 2.7rem !important;
+    }
+    
+    .common-header .corner-title {
+        font-size: 1rem !important;
+    }
+    
+    .main-title {
+        font-size: 5.12vw !important;
+    }
+    
+    .photo-section {
+        height: 100vh !important;
+    }
+    
+    .photo-section h3 {
+        font-size: clamp(1.82rem, 2.8vw, 2.45rem) !important;
+    }
+    
+    .photo-grid {
+        width: min(69.73vw, 65.09rem) !important;
+        height: min(69.73vh, 65.09rem) !important;
+        gap: clamp(0.35rem, 0.7vw, 1.4rem) !important;
+    }
+}
+    
+    .common-header .dropdown-menu {
+        padding: clamp(1.5rem, 3vw, 2.5rem) 0 !important;
+        min-width: clamp(25rem, 45vw, 35rem) !important;
+    }
+    
+    .common-header .dropdown-menu li a {
+        padding: clamp(1.2rem, 2.5vw, 2rem) clamp(2rem, 4vw, 3rem) !important;
+        font-size: clamp(1.8rem, 3.5vw, 2.5rem) !important;
+    }
+    
+    .common-header .submenu {
+        padding: clamp(1.5rem, 3vw, 2.5rem) 0 !important;
+        min-width: clamp(20rem, 35vw, 25rem) !important;
+    }
+    
+    .common-header .submenu li a {
+        padding: clamp(1.2rem, 2.5vw, 2rem) clamp(2rem, 4vw, 3rem) !important;
+        font-size: clamp(1.6rem, 3vw, 2.2rem) !important;
+    }
+}
