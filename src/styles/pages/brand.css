@@ -33,15 +33,18 @@ body {
 .brand-section .hero-section {
     position: relative;
     height: auto;
-    padding: 2rem 0 1rem 0;
-    margin-top: 0;
-    flex-shrink: 0;
+    padding: 8rem 0 4rem 0;
+    margin-top: 2rem;
+    text-align: center;
+    background: var(--color-white);
+    min-height: 40vh;
 }
 
 .brand-section .hero-section .main-title {
-    transform: scaleY(2.5) scaleX(1.2);
+    transform: scaleY(4.2) scaleX(1.6128);
     margin-top: 0;
     font-family: 'BitgoeulBold', sans-serif;
+    font-size: clamp(3.36rem, 6.72vw, 6.72rem);
 }
 
 /* Content Section */
@@ -49,11 +52,14 @@ body {
     margin-top: 0;
     position: relative;
     background: var(--color-white);
-    padding: 0 var(--spacing-lg);
-    z-index: 2;
+    padding: 5vh var(--container-padding) 0;
+    width: 100vw;
     flex: 1;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 2;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 }
 
@@ -63,23 +69,28 @@ body {
     font-size: 1.8rem;
     font-weight: bold;
     margin-bottom: var(--spacing-sm);
-    text-align: center;
+    text-align: left;
+    margin-left: 0;
+    padding-left: 0;
 }
 
 /* Brand List */
 .brand-list {
-    width: 100%;
-    max-width: 800px;
-    text-align: center;
+    width: 88vw;
+    height: 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
 }
 
 .list-header {
     margin-bottom: var(--spacing-md);
+    text-align: center;
 }
 
 .list-title {
     font-family: 'BitgoeulBold', sans-serif;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
     margin-bottom: var(--spacing-lg);
 }
@@ -88,13 +99,23 @@ body {
 .brand-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-md);
+    gap: clamp(1rem, 2vw, 2rem);
     margin-bottom: var(--spacing-lg);
+    width: 70vw;
+    margin: 0 auto var(--spacing-lg) auto;
+}
+
+@media (min-width: 120rem) {
+    .brand-grid {
+        grid-template-columns: repeat(3, 1fr);
+        width: 70vw;
+        margin: 0 auto var(--spacing-lg) auto;
+    }
 }
 
 .brand-item {
-    padding: var(--spacing-md);
-    border: 1px solid var(--color-gray-medium);
+    padding: clamp(1.5rem, 3vw, 2.5rem);
+    border: var(--border-thin) solid var(--color-gray-medium);
     border-radius: var(--radius-md);
     background: var(--color-white);
     transition: var(--transition-fast);
@@ -102,17 +123,18 @@ body {
 
 .brand-item:hover {
     background: var(--color-gray-light);
-    transform: translateY(-2px);
+    transform: translateY(clamp(-0.125rem, -0.2vw, -0.25rem));
     box-shadow: var(--shadow-light);
 }
 
 .brand-link {
     font-family: 'BitgoeulMedium', sans-serif;
-    font-size: 1rem;
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
     color: var(--color-black);
     text-decoration: none;
     display: block;
-    padding: var(--spacing-sm);
+    padding: clamp(0.8rem, 1.5vw, 1.5rem);
+    text-align: center;
 }
 
 .brand-link:hover {
@@ -138,10 +160,11 @@ body {
     padding: var(--spacing-md) var(--spacing-sm);
     font-family: 'BitgoeulMedium', sans-serif;
     font-size: 1rem;
+    margin-top: auto;
 }
 
 /* Mobile Responsive */
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
     .brand-section .content-section {
         padding: 0 var(--spacing-sm);
     }
@@ -161,7 +184,7 @@ body {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 30rem) {
     .brand-grid {
         grid-template-columns: 1fr;
     }

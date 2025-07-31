@@ -18,7 +18,7 @@
 
 .collection-slider .slider-images {
     display: flex;
-    gap: 20px;
+    gap: clamp(1.25rem, 2.5vw, 2rem);
     transition: var(--transition-normal);
 }
 
@@ -38,20 +38,24 @@
 
 /* Index Page Slider */
 .designers-section .slider-container {
-    max-width: 1000px;
+    max-width: 100vw;
     margin: 0 auto;
+    position: relative;
+    padding: 0 clamp(2rem, 8vw, 8rem);
 }
 
 .designers-section .slider-track {
-    gap: 40px;
+    gap: clamp(1rem, 2vw, 2rem);
 }
 
 .designers-section .card {
-    flex: 0 0 calc((100% - 80px) / 3);
-    height: 660px;
+    flex: 0 0 calc((100vw - 12rem) / 3);
+    max-width: clamp(18rem, 28vw, 25rem);
+    height: clamp(24rem, 37vw, 33rem);
     background-size: cover;
     background-position: center;
     border-radius: var(--radius-lg);
+    aspect-ratio: 3/4;
 }
 
 .designers-section .arrow {
@@ -63,11 +67,23 @@
 }
 
 .designers-section .arrow.left {
-    left: -100px;
+    left: clamp(-3.75rem, -5vw, -6.25rem);
 }
 
 .designers-section .arrow.right {
-    right: -100px;
+    right: clamp(-3.75rem, -5vw, -6.25rem);
+}
+
+@media (min-width: 120rem) {
+    .designers-section .slider-container {
+        max-width: 100vw;
+        padding: 0 10rem;
+    }
+    
+    .designers-section .card {
+        max-width: calc((100vw - 20rem) / 3);
+        height: calc(((100vw - 20rem) / 3) * 4 / 3);
+    }
 }
 
 /* Designer Page Slider */
@@ -83,14 +99,14 @@
 }
 
 .collection-slider .slider-frame {
-    width: calc(100vw - 300px);
+    width: calc(100vw - 18.75rem);
     overflow: hidden;
 }
 
 .collection-slider .slide-image {
-    flex: 0 0 calc((100vw - 300px - 20px) / 2);
+    flex: 0 0 calc((100vw - 18.75rem - 1.25rem) / 2);
     height: 95vh;
-    min-height: 700px;
+    min-height: clamp(25rem, 43.75vw, 43.75rem);
 }
 
 .collection-slider .slide-image img {
@@ -103,9 +119,9 @@
     position: absolute;
     background: transparent;
     border: none;
-    width: 80px;
-    height: 80px;
-    font-size: 4rem;
+    width: clamp(3.75rem, 10vw, 5rem);
+    height: clamp(3.75rem, 10vw, 5rem);
+    font-size: clamp(2.5rem, 6vw, 4rem);
     color: var(--color-black);
     display: flex;
     align-items: center;
@@ -121,28 +137,28 @@
 }
 
 .collection-slider .arrow.left {
-    left: 50px;
+    left: clamp(2rem, 6.25vw, 3.125rem);
 }
 
 .collection-slider .arrow.right {
-    right: 50px;
+    right: clamp(2rem, 6.25vw, 3.125rem);
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
     .slider-images {
-        gap: 20px;
+        gap: clamp(1.25rem, 2.5vw, 2rem);
     }
     
     .designers-section .card {
         flex: 0 0 90%;
-        height: 480px;
+        height: clamp(26rem, 78vw, 39rem);
     }
     
     .collection-slider .slide-image {
         flex: 0 0 90vw;
         height: 70vh;
-        min-height: 400px;
+        min-height: clamp(20rem, 50vw, 25rem);
         min-width: 90vw;
     }
 }

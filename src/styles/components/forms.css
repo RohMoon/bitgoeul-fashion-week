@@ -1,25 +1,26 @@
 /* ===== Form Components ===== */
 form {
     background: rgba(255, 255, 255, 0.08);
-    padding: 1.5rem;
-    max-width: 400px;
+    padding: 1.95rem;
+    max-width: clamp(26rem, 65vw, 32.5rem);
     margin: 0 auto;
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(clamp(0.125rem, 0.5vw, 0.25rem));
     border-radius: var(--radius-md);
 }
 
 input, textarea {
     width: 100%;
-    padding: 0.75rem;
+    padding: 0.975rem;
     margin-bottom: var(--spacing-sm);
     font-family: var(--font-light);
+    font-size: clamp(1rem, 1.5vw, 1.17rem);
     border-radius: var(--radius-sm);
     box-sizing: border-box;
     transition: var(--transition-fast);
 }
 
 input:focus, textarea:focus {
-    outline: 2px solid var(--color-primary);
+    outline: var(--border-thin) solid var(--color-primary);
 }
 
 button {
@@ -31,15 +32,16 @@ button {
 
 /* Primary Button */
 .btn-primary {
-    padding: 0.75rem 2rem;
+    padding: 0.975rem 2.6rem;
     background-color: var(--color-primary);
     color: var(--color-black);
     font-weight: 500;
+    font-size: clamp(1rem, 1.5vw, 1.17rem);
 }
 
 .btn-primary:hover {
     background-color: #e0a500;
-    transform: translateY(-1px);
+    transform: translateY(clamp(-0.0625rem, -0.1vw, -0.125rem));
 }
 
 /* Secondary Button */
@@ -47,7 +49,7 @@ button {
     padding: 0.5rem 1.5rem;
     background-color: transparent;
     color: var(--color-black);
-    border: 1px solid var(--color-black);
+    border: var(--border-thin) solid var(--color-black);
 }
 
 .btn-secondary:hover {
