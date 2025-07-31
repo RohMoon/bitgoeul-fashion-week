@@ -3,6 +3,11 @@
 /* Base Font for Designer Page */
 body {
     font-family: 'BitgoeulLight', sans-serif;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: auto;
 }
 
 /* Header Override for Designer Page */
@@ -37,22 +42,25 @@ body {
 .hero-designer-section {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 /* Hero Section Override for Designer Page */
 .hero-designer-section .hero-section {
     position: relative;
     height: auto;
-    padding: 2rem 0 1rem 0;
-    margin-top: 0;
-    flex-shrink: 0;
+    padding: 8rem 0 4rem 0;
+    margin-top: 2rem;
+    text-align: center;
+    background: var(--color-white);
+    min-height: 40vh;
 }
 
 .hero-designer-section .hero-section .main-title {
-    transform: scaleY(2.5) scaleX(1.2);
+    transform: scaleY(4.2) scaleX(1.6128);
     margin-top: 0;
     font-family: 'BitgoeulBold', sans-serif;
+    font-size: clamp(3.36rem, 6.72vw, 6.72rem);
 }
 
 /* Content Section */
@@ -73,9 +81,10 @@ body {
 /* Section Title */
 .section-title {
     font-family: 'BitgoeulBold', sans-serif;
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin-bottom: var(--spacing-sm);
+    font-size: 2.2rem;
+    font-weight: 900;
+    margin: var(--spacing-md) 0 var(--spacing-md) 0;
+    text-align: center;
 }
 
 /* Designer Profile */
@@ -109,6 +118,10 @@ body {
 
 .text-content {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateX(calc(clamp(6rem, 15vw, 12rem) / 2));
 }
 
 .profile-text h3 {
@@ -116,6 +129,7 @@ body {
     font-size: 2rem;
     font-weight: bold;
     margin: 0 0 var(--spacing-sm) 0;
+    text-align: center;
 }
 
 .profile-text p {
@@ -124,10 +138,11 @@ body {
     font-weight: 300;
     line-height: 1.7;
     max-width: 56.25rem;
+    text-align: left;
 }
 
 .brand-logo {
-    width: clamp(4rem, 8vw, 5rem);
+    width: clamp(6rem, 15vw, 12rem);
     height: auto;
     flex-shrink: 0;
     opacity: 1;
@@ -137,6 +152,7 @@ body {
     box-shadow: 0 clamp(0.125rem, 0.4vw, 0.5rem) clamp(0.5rem, 1.6vw, 1rem) rgba(0, 0, 0, 0.1);
     aspect-ratio: 1;
     object-fit: contain;
+    transform: translateX(calc(clamp(6rem, 15vw, 12rem) / 2));
 }
 
 /* Scroll Guide */

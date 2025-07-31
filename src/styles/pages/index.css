@@ -126,13 +126,13 @@
 
 .photo-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: clamp(0.5rem, 1vw, 2rem);
-    width: min(89.25vw, 91.875rem);
-    height: min(84vh, 52.5rem);
+    width: min(99.62vw, 92.98rem);
+    height: min(99.62vh, 92.98rem);
     margin: 0 auto;
-    aspect-ratio: 16/9;
+    aspect-ratio: 1/1;
     transform: translateY(-2vh);
 }
 
@@ -153,18 +153,19 @@
 /* Mobile responsive for photo grid */
 @media (max-width: 48rem) {
     .photo-grid {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(6, 1fr);
-        width: min(94.5vw, 39.375rem);
-        height: min(89.25vh, 59.0625rem);
-        gap: clamp(0.75rem, 1.5vw, 1.5rem);
-        aspect-ratio: 2/3;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        width: min(90vw, 35rem);
+        height: min(90vw, 35rem);
+        gap: clamp(0.5rem, 1vw, 1rem);
+        aspect-ratio: 1/1;
     }
 }
 
 @media (min-width: 120rem) {
     .photo-grid {
-        width: min(73.5vw, 91.875rem);
+        width: min(79.7vw, 92.98rem);
+        height: min(79.7vh, 92.98rem);
         gap: 2rem;
     }
 }
