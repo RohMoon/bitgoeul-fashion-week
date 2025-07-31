@@ -21,13 +21,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const maxIndex = Math.max(0, slides.length - slidesToShow);
 
     function getSlideWidth() {
-        return (window.innerWidth - 300 - 20) / 2;
+        return (window.innerWidth - 300) / 2; // 18.75rem = 300px
     }
 
     function updateSlider() {
         const slideWidth = getSlideWidth();
-        const gap = 20;
-        const offset = currentIndex * (slideWidth + gap);
+        const gap = 0; // CSS gap: 0와 일치
+        const marginRight = -16; // CSS margin-right: -1rem = -16px와 일치
+        const offset = currentIndex * (slideWidth + gap + marginRight);
         
         slider.style.transform = `translateX(-${offset}px)`;
         slider.style.transition = 'transform 0.3s ease-in-out';
