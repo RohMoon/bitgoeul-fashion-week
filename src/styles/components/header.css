@@ -201,7 +201,7 @@
 }
 
 /* 21:9 와이드 모니터 (2560x1080 등) 전용 스타일 */
-@media (min-aspect-ratio: 21/9) {
+@media (min-aspect-ratio: 21/9) and (max-width: 3000px) {
     .hamburger {
         font-size: clamp(2.5rem, 4vw, 2rem) !important;
     }
@@ -229,4 +229,39 @@
         padding: clamp(0.21rem, 0.4375vw, 0.35rem) clamp(0.35rem, 0.7vw, 0.525rem) !important;
         font-size: clamp(0.28rem, 0.525vw, 0.385rem) !important;
     }
+}
+
+/* 모든 해상도에서 동일한 스타일 적용 */
+.hamburger {
+    font-size: 6rem !important;
+}
+
+.corner-title {
+    font-size: 2.4rem !important;
+}
+
+.main-title {
+    font-size: 3.2rem !important;
+    transform: scaleY(3.6) scaleX(1.15) !important;
+    max-width: 70rem !important;
+}
+
+.dropdown-menu {
+    padding: 1.6rem 0 !important;
+    min-width: 24rem !important;
+}
+
+.dropdown-menu li a {
+    padding: 1.2rem 2rem !important;
+    font-size: 1.7rem !important;
+}
+
+.submenu {
+    padding: 1.6rem 0 !important;
+    min-width: 20rem !important;
+}
+
+.submenu li a {
+    padding: 1.2rem 2rem !important;
+    font-size: 1.5rem !important;
 }

@@ -213,3 +213,51 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+/* 모든 해상도에서 동일한 스타일 적용 */
+.brand-main-title {
+    font-size: clamp(2.2rem, 4.2vw, 3.8rem) !important;
+    transform: scaleY(3.2) scaleX(1.3) !important;
+}
+
+.brand-section .common-header .hamburger {
+    font-size: 3.12rem !important;
+}
+
+.brand-section .common-header .corner-title {
+    font-size: 1.248rem !important;
+}
+
+.brand-grid {
+    width: 55vw !important;
+    gap: 1.8rem !important;
+}
+
+.brand-item {
+    padding: 2rem !important;
+}
+
+.brand-link {
+    font-size: 1.4rem !important;
+    padding: 1.2rem !important;
+}
+
+.brand-section .common-header .dropdown-menu {
+    padding: 0.832rem 0 !important;
+    min-width: 12.48rem !important;
+}
+
+.brand-section .common-header .dropdown-menu li a {
+    padding: 0.624rem 1.04rem !important;
+    font-size: 0.884rem !important;
+}
+
+.brand-section .common-header .submenu {
+    padding: 0.832rem 0 !important;
+    min-width: 10.4rem !important;
+}
+
+.brand-section .common-header .submenu li a {
+    padding: 0.624rem 1.04rem !important;
+    font-size: 0.78rem !important;
+}

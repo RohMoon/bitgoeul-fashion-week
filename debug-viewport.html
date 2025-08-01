@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>뷰포트 디버깅</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f0f0f0;
+        }
+        .info-box {
+            background: white;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .highlight {
+            background: #fff3cd;
+            padding: 10px;
+            border-left: 4px solid #ffc107;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>뷰포트 정보 확인</h1>
+    
+    <div class="info-box">
+        <h3>화면 해상도</h3>
+        <p id="screen-info"></p>
+    </div>
+    
+    <div class="info-box">
+        <h3>브라우저 뷰포트</h3>
+        <p id="viewport-info"></p>
+    </div>
+    
+    <div class="info-box">
+        <h3>디바이스 픽셀 비율</h3>
+        <p id="dpr-info"></p>
+    </div>
+    
+    <div class="highlight">
+        <strong>클라이언트님께서 확인해주세요:</strong><br>
+        1. 브라우저 줌이 100%인지 확인 (Ctrl + 0)<br>
+        2. Windows 디스플레이 스케일링이 100%인지 확인<br>
+        3. 위 정보를 개발자에게 전달해주세요
+    </div>
+
+    <script>
+        function updateInfo() {
+            document.getElementById('screen-info').innerHTML = 
+                `화면 크기: ${screen.width} x ${screen.height}<br>` +
+                `사용 가능한 화면: ${screen.availWidth} x ${screen.availHeight}`;
+            
+            document.getElementById('viewport-info').innerHTML = 
+                `뷰포트 크기: ${window.innerWidth} x ${window.innerHeight}<br>` +
+                `문서 크기: ${document.documentElement.clientWidth} x ${document.documentElement.clientHeight}`;
+            
+            document.getElementById('dpr-info').innerHTML = 
+                `디바이스 픽셀 비율: ${window.devicePixelRatio}`;
+        }
+        
+        updateInfo();
+        window.addEventListener('resize', updateInfo);
+    </script>
+</body>
+</html>

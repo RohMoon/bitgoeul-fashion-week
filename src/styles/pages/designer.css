@@ -242,3 +242,64 @@ html {
         height: 25rem;
     }
 }
+
+/* 모든 해상도에서 동일한 스타일 적용 */
+.designer-main-title {
+    font-size: clamp(2.2rem, 4.2vw, 3.8rem) !important;
+    transform: scaleY(3.2) scaleX(1.3) !important;
+}
+
+.hero-designer-section .hero-section .main-title {
+    font-size: clamp(2.2rem, 4.2vw, 3.8rem) !important;
+    transform: scaleY(3.2) scaleX(1.3) !important;
+}
+
+.hero-designer-section .common-header .hamburger {
+    font-size: 3.12rem !important;
+}
+
+.hero-designer-section .common-header .corner-title {
+    font-size: 1.248rem !important;
+}
+
+.section-title {
+    font-size: 1.9rem !important;
+}
+
+.profile-image {
+    width: clamp(11rem, 17vw, 14rem) !important;
+    height: clamp(16.5rem, 25.5vw, 21rem) !important;
+}
+
+.profile-text h3 {
+    font-size: 1.8rem !important;
+}
+
+.profile-text p {
+    font-size: 1rem !important;
+    max-width: 50rem !important;
+}
+
+.brand-logo {
+    width: clamp(5.5rem, 13vw, 10.5rem) !important;
+}
+
+.hero-designer-section .common-header .dropdown-menu {
+    padding: 0.832rem 0 !important;
+    min-width: 12.48rem !important;
+}
+
+.hero-designer-section .common-header .dropdown-menu li a {
+    padding: 0.624rem 1.04rem !important;
+    font-size: 0.884rem !important;
+}
+
+.hero-designer-section .common-header .submenu {
+    padding: 0.832rem 0 !important;
+    min-width: 10.4rem !important;
+}
+
+.hero-designer-section .common-header .submenu li a {
+    padding: 0.624rem 1.04rem !important;
+    font-size: 0.78rem !important;
+}
