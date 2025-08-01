@@ -33,22 +33,28 @@
 /* Designer Hero Section - 별도 스타일 */
 .designer-hero-section {
     position: relative;
-    height: auto;
-    padding: 5rem 0 3rem 0;
-    margin-top: 1rem;
+    width: 100%;
+    padding: var(--spacing-3xl) var(--spacing-md);
+    margin: 0;
     text-align: center;
     background: var(--color-white);
-    min-height: 32vh;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
 }
 
 .designer-main-title {
     font-family: var(--font-bold);
-    font-size: clamp(2.2rem, 4.5vw, 3.8rem);
-    transform: scaleY(3.2) scaleX(1.35);
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    transform: none;
     margin: 0;
-    line-height: 1;
+    line-height: 1.2;
     letter-spacing: -0.02em;
-    white-space: nowrap;
+    white-space: normal;
+    max-width: 100%;
+    word-wrap: break-word;
 }
 
 /* Base Font for Designer Page */
@@ -99,34 +105,42 @@ html {
 /* Hero Section Override for Designer Page */
 .hero-designer-section .hero-section {
     position: relative;
-    height: auto;
-    padding: 8rem 0 4rem 0;
-    margin-top: 2rem;
+    width: 100%;
+    padding: var(--spacing-3xl) var(--spacing-md);
+    margin: 0;
     text-align: center;
     background: var(--color-white);
-    min-height: 40vh;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
 }
 
 .hero-designer-section .hero-section .main-title {
-    transform: scaleY(4.2) scaleX(1.6128);
-    margin-top: 0;
+    transform: none;
+    margin: 0;
     font-family: 'BitgoeulBold', sans-serif;
-    font-size: clamp(3.36rem, 6.72vw, 6.72rem);
+    font-size: clamp(2.5rem, 7vw, 5.5rem);
+    line-height: 1.2;
+    max-width: 100%;
+    word-wrap: break-word;
 }
 
 /* Content Section */
 .hero-designer-section .content-section {
-    margin-top: 0;
     position: relative;
     background: var(--color-white);
-    padding: 0 var(--container-padding);
-    max-width: var(--container-max-width);
-    margin-left: auto;
-    margin-right: auto;
+    padding: var(--spacing-3xl) var(--spacing-md);
+    width: 100%;
+    max-width: 75rem;
+    margin: 0 auto;
     z-index: 2;
-    flex: 1;
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
+    box-sizing: border-box;
 }
 
 /* Section Title */
@@ -141,12 +155,14 @@ html {
 /* Designer Profile */
 .designer-profile {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    gap: var(--spacing-lg);
+    gap: var(--spacing-2xl);
     flex-wrap: wrap;
-    margin-bottom: var(--spacing-md);
-    text-align: center;
+    margin: var(--spacing-2xl) 0;
+    text-align: left;
+    width: 100%;
+    max-width: 100%;
 }
 
 .profile-image {
@@ -163,16 +179,19 @@ html {
 .text-logo-container {
     display: flex;
     align-items: flex-start;
-    gap: var(--spacing-md);
-    justify-content: center;
+    gap: var(--spacing-lg);
+    justify-content: flex-start;
+    flex: 1;
+    min-width: 300px;
 }
 
 .text-content {
     flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    transform: translateX(calc(clamp(6rem, 15vw, 12rem) / 2));
+    align-items: flex-start;
+    transform: none;
+    min-width: 250px;
 }
 
 .profile-text h3 {
@@ -193,7 +212,7 @@ html {
 }
 
 .brand-logo {
-    width: clamp(6rem, 15vw, 12rem);
+    width: clamp(6rem, 12vw, 10rem);
     height: auto;
     flex-shrink: 0;
     opacity: 1;
@@ -203,7 +222,7 @@ html {
     box-shadow: 0 clamp(0.125rem, 0.4vw, 0.5rem) clamp(0.5rem, 1.6vw, 1rem) rgba(0, 0, 0, 0.1);
     aspect-ratio: 1;
     object-fit: contain;
-    transform: translateX(calc(clamp(6rem, 15vw, 12rem) / 2));
+    transform: none;
 }
 
 /* Scroll Guide */
@@ -243,152 +262,183 @@ html {
     }
 }
 
-/* 매거진 스타일 - 디자이너 페이지 */
+/* 코펜하겐 패션위크 스타일 - 디자이너 페이지 */
 .designer-main-title {
-    font-size: clamp(3rem, 5.5vw, 5rem) !important;
-    transform: scaleY(4) scaleX(1.6) !important;
-    font-weight: 900 !important;
-    letter-spacing: -0.08em !important;
-    text-transform: uppercase !important;
-    background: linear-gradient(45deg, #000, #333) !important;
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-    text-shadow: 3px 3px 6px rgba(0,0,0,0.4) !important;
+    font-family: var(--font-bold) !important;
+    font-size: clamp(2.2rem, 5vw, 4rem) !important;
+    transform: none !important;
+    font-weight: 300 !important;
+    letter-spacing: -0.02em !important;
+    text-transform: none !important;
+    color: var(--color-text-primary) !important;
+    text-shadow: none !important;
+    margin: 0 !important;
+    line-height: 1.2 !important;
+    max-width: 100% !important;
+    word-wrap: break-word !important;
 }
 
 .hero-designer-section .hero-section .main-title {
-    font-size: clamp(3.5rem, 6vw, 5.5rem) !important;
-    transform: scaleY(4.5) scaleX(1.8) !important;
-    font-weight: 900 !important;
-    letter-spacing: -0.1em !important;
-    text-transform: uppercase !important;
-    background: linear-gradient(135deg, #f1b800, #ff6b35) !important;
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-    text-shadow: 4px 4px 8px rgba(241,184,0,0.4) !important;
+    font-family: var(--font-bold) !important;
+    font-size: clamp(2.5rem, 7vw, 5.5rem) !important;
+    transform: none !important;
+    font-weight: 300 !important;
+    letter-spacing: -0.02em !important;
+    text-transform: none !important;
+    color: var(--color-text-primary) !important;
+    text-shadow: none !important;
+    line-height: 1.2 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+    word-wrap: break-word !important;
 }
 
 .hero-designer-section .common-header .hamburger {
-    font-size: 4rem !important;
-    font-weight: 300 !important;
-    transition: transform 0.3s ease !important;
+    font-family: var(--font-primary) !important;
+    font-size: var(--text-lg) !important;
+    font-weight: 400 !important;
+    transition: var(--transition-fast) !important;
+    color: var(--color-text-primary) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
 }
 
 .hero-designer-section .common-header .hamburger:hover {
-    transform: scale(1.1) !important;
+    color: var(--color-text-secondary) !important;
 }
 
 .hero-designer-section .common-header .corner-title {
-    font-size: 1.8rem !important;
-    font-weight: 700 !important;
-    letter-spacing: 0.05em !important;
+    font-family: var(--font-medium) !important;
+    font-size: var(--text-xs) !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.15em !important;
     text-transform: uppercase !important;
+    color: var(--color-text-muted) !important;
 }
 
 .section-title {
-    font-size: 2.5rem !important;
-    font-weight: 800 !important;
-    text-transform: uppercase !important;
-    letter-spacing: -0.02em !important;
-    background: linear-gradient(45deg, #f1b800, #ff6b35) !important;
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
+    font-family: var(--font-bold) !important;
+    font-size: var(--text-4xl) !important;
+    font-weight: 300 !important;
+    text-transform: none !important;
+    letter-spacing: -0.01em !important;
+    color: var(--color-text-primary) !important;
+    margin-bottom: var(--spacing-2xl) !important;
 }
 
 .designer-profile {
-    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(241,184,0,0.05)) !important;
-    backdrop-filter: blur(20px) !important;
-    border-radius: 30px !important;
-    padding: 3rem !important;
-    border: 2px solid rgba(241,184,0,0.2) !important;
-    transition: all 0.5s ease !important;
+    background: var(--color-white) !important;
+    backdrop-filter: none !important;
+    border-radius: var(--radius-xl) !important;
+    padding: var(--spacing-2xl) !important;
+    border: 1px solid var(--color-border) !important;
+    transition: var(--transition-normal) !important;
+    box-shadow: var(--shadow-soft) !important;
 }
 
 .designer-profile:hover {
-    transform: translateY(-10px) !important;
-    box-shadow: 0 30px 60px rgba(241,184,0,0.2) !important;
-    border-color: rgba(241,184,0,0.4) !important;
+    transform: translateY(-4px) !important;
+    box-shadow: var(--shadow-large) !important;
+    border-color: var(--color-text-primary) !important;
 }
 
 .profile-image {
     width: clamp(12rem, 18vw, 16rem) !important;
     height: clamp(18rem, 27vw, 24rem) !important;
-    border-radius: 20px !important;
-    transition: all 0.4s ease !important;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.2) !important;
-    filter: contrast(1.1) saturate(1.2) !important;
+    border-radius: var(--radius-lg) !important;
+    transition: var(--transition-normal) !important;
+    box-shadow: var(--shadow-soft) !important;
+    filter: grayscale(20%) contrast(1.05) !important;
 }
 
 .profile-image:hover {
-    transform: scale(1.05) rotate(2deg) !important;
-    box-shadow: 0 25px 50px rgba(241,184,0,0.3) !important;
+    transform: scale(1.02) !important;
+    box-shadow: var(--shadow-medium) !important;
+    filter: grayscale(0%) contrast(1.1) !important;
 }
 
 .profile-text h3 {
-    font-size: 2.2rem !important;
-    font-weight: 800 !important;
-    text-transform: uppercase !important;
-    letter-spacing: 0.02em !important;
-    background: linear-gradient(45deg, #000, #333) !important;
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
+    font-family: var(--font-bold) !important;
+    font-size: var(--text-3xl) !important;
+    font-weight: 500 !important;
+    text-transform: none !important;
+    letter-spacing: -0.01em !important;
+    color: var(--color-text-primary) !important;
+    margin-bottom: var(--spacing-md) !important;
 }
 
 .profile-text p {
-    font-size: 1.1rem !important;
-    max-width: 55rem !important;
-    line-height: 1.8 !important;
+    font-family: var(--font-primary) !important;
+    font-size: var(--text-base) !important;
+    max-width: 50rem !important;
+    line-height: 1.6 !important;
     font-weight: 400 !important;
-    color: #333 !important;
+    color: var(--color-text-secondary) !important;
 }
 
 .brand-logo {
     width: clamp(6rem, 14vw, 12rem) !important;
-    transition: all 0.4s ease !important;
-    filter: drop-shadow(0 8px 16px rgba(241,184,0,0.3)) !important;
+    transition: var(--transition-normal) !important;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1)) !important;
+    opacity: 0.9 !important;
 }
 
 .brand-logo:hover {
-    transform: scale(1.1) rotate(-5deg) !important;
-    filter: drop-shadow(0 12px 24px rgba(241,184,0,0.5)) !important;
+    transform: scale(1.05) !important;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15)) !important;
+    opacity: 1 !important;
 }
 
 .hero-designer-section .common-header .dropdown-menu {
-    padding: 1.2rem 0 !important;
-    min-width: 15rem !important;
-    background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(241,184,0,0.1)) !important;
+    padding: var(--spacing-xs) 0 !important;
+    min-width: 12rem !important;
+    background: var(--color-white) !important;
     backdrop-filter: blur(10px) !important;
-    border: 2px solid #f1b800 !important;
-    box-shadow: 0 8px 32px rgba(241,184,0,0.3) !important;
+    border: 1px solid var(--color-border) !important;
+    border-radius: var(--radius-md) !important;
+    box-shadow: var(--shadow-large) !important;
 }
 
 .hero-designer-section .common-header .dropdown-menu li a {
-    padding: 0.8rem 1.5rem !important;
-    font-size: 1.1rem !important;
-    font-weight: 600 !important;
-    text-transform: uppercase !important;
+    font-family: var(--font-medium) !important;
+    padding: var(--spacing-sm) var(--spacing-md) !important;
+    font-size: var(--text-sm) !important;
+    font-weight: 500 !important;
+    text-transform: none !important;
     letter-spacing: 0.02em !important;
-    transition: all 0.3s ease !important;
+    transition: var(--transition-fast) !important;
+    color: var(--color-text-primary) !important;
+    border-bottom: 1px solid var(--color-border) !important;
 }
 
 .hero-designer-section .common-header .dropdown-menu li a:hover {
-    background: linear-gradient(45deg, #f1b800, #ff6b35) !important;
-    color: white !important;
-    transform: translateX(5px) !important;
+    background: var(--color-accent) !important;
+    color: var(--color-text-primary) !important;
+    transform: translateX(2px) !important;
 }
 
 .hero-designer-section .common-header .submenu {
-    padding: 1rem 0 !important;
-    min-width: 12rem !important;
-    background: linear-gradient(135deg, rgba(255,255,255,0.98), rgba(241,184,0,0.05)) !important;
+    padding: var(--spacing-xs) 0 !important;
+    min-width: 9rem !important;
+    background: var(--color-white) !important;
     backdrop-filter: blur(8px) !important;
-    border: 1px solid #f1b800 !important;
+    border: 1px solid var(--color-border) !important;
+    border-radius: var(--radius-md) !important;
+    box-shadow: var(--shadow-medium) !important;
 }
 
 .hero-designer-section .common-header .submenu li a {
-    padding: 0.7rem 1.2rem !important;
-    font-size: 0.95rem !important;
-    font-weight: 500 !important;
-    text-transform: uppercase !important;
+    font-family: var(--font-primary) !important;
+    padding: var(--spacing-2xs) var(--spacing-sm) !important;
+    font-size: var(--text-xs) !important;
+    font-weight: 400 !important;
+    text-transform: none !important;
     letter-spacing: 0.01em !important;
+    color: var(--color-text-secondary) !important;
+    transition: var(--transition-fast) !important;
+}
+
+.hero-designer-section .common-header .submenu li a:hover {
+    background: var(--color-accent) !important;
+    color: var(--color-text-primary) !important;
 }
