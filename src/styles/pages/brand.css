@@ -10,16 +10,37 @@ body {
     position: relative;
 }
 
-.common-header .hamburger {
+/* Brand Page 전용 햄버거 메뉴 및 코너 타이틀 크기 조정 */
+.brand-section .common-header .hamburger {
     font-family: 'BitgoeulMedium', sans-serif;
+    font-size: clamp(1.5rem, 2.5vw, 2rem) !important;
 }
 
-.common-header .dropdown-menu li a {
-    font-family: 'BitgoeulMedium', sans-serif;
-}
-
-.common-header .corner-title {
+.brand-section .common-header .corner-title {
     font-family: 'BitgoeulBold', sans-serif;
+    font-size: clamp(0.8rem, 1.2vw, 1rem) !important;
+}
+
+/* Brand Page 전용 드롭다운 메뉴 크기 조정 */
+.brand-section .common-header .dropdown-menu {
+    padding: clamp(0.4rem, 0.8vw, 0.6rem) 0 !important;
+    min-width: clamp(8rem, 15vw, 12rem) !important;
+}
+
+.brand-section .common-header .dropdown-menu li a {
+    font-family: 'BitgoeulMedium', sans-serif;
+    padding: clamp(0.3rem, 0.6vw, 0.5rem) clamp(0.6rem, 1.2vw, 1rem) !important;
+    font-size: clamp(0.7rem, 1.2vw, 0.9rem) !important;
+}
+
+.brand-section .common-header .submenu {
+    padding: clamp(0.4rem, 0.8vw, 0.6rem) 0 !important;
+    min-width: clamp(6rem, 10vw, 8rem) !important;
+}
+
+.brand-section .common-header .submenu li a {
+    padding: clamp(0.3rem, 0.6vw, 0.5rem) clamp(0.6rem, 1.2vw, 1rem) !important;
+    font-size: clamp(0.6rem, 1vw, 0.8rem) !important;
 }
 
 /* Brand Section */
@@ -29,22 +50,25 @@ body {
     min-height: 100vh;
 }
 
-/* Hero Section Override for Brand Page */
-.brand-section .hero-section {
+/* Brand Hero Section - 별도 스타일 */
+.brand-hero-section {
     position: relative;
     height: auto;
-    padding: 8rem 0 4rem 0;
-    margin-top: 2rem;
+    padding: 6rem 0 3rem 0;
+    margin-top: 1rem;
     text-align: center;
     background: var(--color-white);
-    min-height: 40vh;
+    min-height: 35vh;
 }
 
-.brand-section .hero-section .main-title {
-    transform: scaleY(4.2) scaleX(1.6128);
-    margin-top: 0;
+.brand-main-title {
     font-family: 'BitgoeulBold', sans-serif;
-    font-size: clamp(3.36rem, 6.72vw, 6.72rem);
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    transform: scaleY(3.5) scaleX(1.4);
+    margin: 0;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    white-space: nowrap;
 }
 
 /* Content Section */

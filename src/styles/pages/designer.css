@@ -1,5 +1,56 @@
 /* ===== Designer Page Styles ===== */
 
+/* Designer Page 전용 햄버거 메뉴 및 코너 타이틀 크기 조정 */
+.hero-designer-section .common-header .hamburger {
+    font-size: clamp(1.5rem, 2.5vw, 2rem) !important;
+}
+
+.hero-designer-section .common-header .corner-title {
+    font-size: clamp(0.8rem, 1.2vw, 1rem) !important;
+}
+
+/* Designer Page 전용 드롭다운 메뉴 크기 조정 */
+.hero-designer-section .common-header .dropdown-menu {
+    padding: clamp(0.4rem, 0.8vw, 0.6rem) 0 !important;
+    min-width: clamp(8rem, 15vw, 12rem) !important;
+}
+
+.hero-designer-section .common-header .dropdown-menu li a {
+    padding: clamp(0.3rem, 0.6vw, 0.5rem) clamp(0.6rem, 1.2vw, 1rem) !important;
+    font-size: clamp(0.7rem, 1.2vw, 0.9rem) !important;
+}
+
+.hero-designer-section .common-header .submenu {
+    padding: clamp(0.4rem, 0.8vw, 0.6rem) 0 !important;
+    min-width: clamp(6rem, 10vw, 8rem) !important;
+}
+
+.hero-designer-section .common-header .submenu li a {
+    padding: clamp(0.3rem, 0.6vw, 0.5rem) clamp(0.6rem, 1.2vw, 1rem) !important;
+    font-size: clamp(0.6rem, 1vw, 0.8rem) !important;
+}
+
+/* Designer Hero Section - 별도 스타일 */
+.designer-hero-section {
+    position: relative;
+    height: auto;
+    padding: 5rem 0 3rem 0;
+    margin-top: 1rem;
+    text-align: center;
+    background: var(--color-white);
+    min-height: 32vh;
+}
+
+.designer-main-title {
+    font-family: var(--font-bold);
+    font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+    transform: scaleY(3.2) scaleX(1.35);
+    margin: 0;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+}
+
 /* Base Font for Designer Page */
 body {
     font-family: 'BitgoeulLight', sans-serif;

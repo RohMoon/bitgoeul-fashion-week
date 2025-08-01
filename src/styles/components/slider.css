@@ -58,8 +58,9 @@
     flex: 0 0 calc((100vw - 4rem) / 3);
     width: calc((100vw - 4rem) / 3);
     height: calc((100vw - 4rem) / 3 * 4 / 3);
-    background-size: cover;
+    background-size: contain;
     background-position: center;
+    background-repeat: no-repeat;
     border-radius: var(--radius-lg);
     aspect-ratio: 3/4;
 }

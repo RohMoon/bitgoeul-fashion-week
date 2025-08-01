@@ -131,31 +131,31 @@
 /* 일반 모니터에서 헤더 요소 크기 조정 */
 @media (max-width: 2559px) and (min-width: 1200px) {
     .hamburger {
-        font-size: clamp(5rem, 8vw, 8rem);
+        font-size: clamp(5rem, 8vw, 4em);
     }
     
     .corner-title {
-        font-size: clamp(3.5rem, 6vw, 6rem);
+        font-size: clamp(3.5rem, 6vw, 3rem);
     }
     
     .dropdown-menu {
-        padding: clamp(1.5rem, 3vw, 2.5rem) 0;
-        min-width: clamp(25rem, 45vw, 35rem);
+        padding: clamp(0.525rem, 1.05vw, 0.875rem) 0;
+        min-width: clamp(8.75rem, 15.75vw, 12.25rem);
     }
     
     .dropdown-menu li a {
-        padding: clamp(1.2rem, 2.5vw, 2rem) clamp(2rem, 4vw, 3rem);
-        font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+        padding: clamp(0.42rem, 0.875vw, 0.7rem) clamp(0.7rem, 1.4vw, 1.05rem);
+        font-size: clamp(0.63rem, 1.225vw, 0.875rem);
     }
     
     .submenu {
-        padding: clamp(1.5rem, 3vw, 2.5rem) 0;
-        min-width: clamp(20rem, 35vw, 25rem);
+        padding: clamp(0.525rem, 1.05vw, 0.875rem) 0;
+        min-width: clamp(7rem, 12.25vw, 8.75rem);
     }
     
     .submenu li a {
-        padding: clamp(1.2rem, 2.5vw, 2rem) clamp(2rem, 4vw, 3rem);
-        font-size: clamp(1.6rem, 3vw, 2.2rem);
+        padding: clamp(0.42rem, 0.875vw, 0.7rem) clamp(0.7rem, 1.4vw, 1.05rem);
+        font-size: clamp(0.56rem, 1.05vw, 0.77rem);
     }
 }
 
@@ -197,5 +197,36 @@
     .main-title {
         font-size: clamp(1.5rem, 8vw, 2.5rem);
         transform: scaleY(2) scaleX(1.6);
+    }
+}
+
+/* 21:9 와이드 모니터 (2560x1080 등) 전용 스타일 */
+@media (min-aspect-ratio: 21/9) {
+    .hamburger {
+        font-size: clamp(2.5rem, 4vw, 2rem) !important;
+    }
+    
+    .corner-title {
+        font-size: clamp(1.75rem, 3vw, 1.5rem) !important;
+    }
+    
+    .dropdown-menu {
+        padding: clamp(0.2625rem, 0.525vw, 0.4375rem) 0 !important;
+        min-width: clamp(4.375rem, 7.875vw, 6.125rem) !important;
+    }
+    
+    .dropdown-menu li a {
+        padding: clamp(0.21rem, 0.4375vw, 0.35rem) clamp(0.35rem, 0.7vw, 0.525rem) !important;
+        font-size: clamp(0.315rem, 0.6125vw, 0.4375rem) !important;
+    }
+    
+    .submenu {
+        padding: clamp(0.2625rem, 0.525vw, 0.4375rem) 0 !important;
+        min-width: clamp(3.5rem, 6.125vw, 4.375rem) !important;
+    }
+    
+    .submenu li a {
+        padding: clamp(0.21rem, 0.4375vw, 0.35rem) clamp(0.35rem, 0.7vw, 0.525rem) !important;
+        font-size: clamp(0.28rem, 0.525vw, 0.385rem) !important;
     }
 }
