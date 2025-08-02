@@ -1,12 +1,12 @@
 /* ===== Header Component ===== */
 .common-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+    position: relative;
+    width: 100%;
     background-color: var(--color-white);
     padding: var(--spacing-sm) var(--spacing-md);
     z-index: var(--z-header);
+    min-height: 4rem;
+    box-sizing: border-box;
 }
 
 
@@ -23,7 +23,7 @@
 }
 
 .hamburger {
-    font-size: clamp(3.64rem, 5.46vw, 4.55rem);
+    font-size: clamp(4.73rem, 7.1vw, 5.92rem);
     z-index: var(--z-hamburger);
     transition: var(--transition-fast);
 }
@@ -113,15 +113,20 @@
 .corner-title {
     font-family: var(--font-bold);
     position: absolute;
-    top: var(--spacing-sm);
-    right: var(--spacing-md);
+    top: 0.5rem;
+    right: 1rem;
     text-align: right;
-    font-size: clamp(2rem, 3vw, 2.5rem);
-    line-height: 1.2;
+    font-size: clamp(1.01rem, 2.03vw, 1.35rem);
+    line-height: 0.95;
     z-index: 10;
     text-decoration: none;
     color: inherit;
     transition: var(--transition-fast);
+    max-width: 135px;
+    overflow: hidden;
+    white-space: normal;
+    height: auto;
+    box-sizing: border-box;
 }
 
 .corner-title:hover {

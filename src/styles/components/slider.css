@@ -8,8 +8,9 @@
 
 .slider-viewport {
     overflow: hidden;
-    width: 100%;
+    width: 96%;
     flex: 1;
+    margin: 0 2%;
 }
 
 .slider-track {

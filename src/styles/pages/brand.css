@@ -1,13 +1,22 @@
 /* ===== Brand Page Styles ===== */
 
-/* Base Font for Brand Page */
+/* Base styles */
+html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'BitgoeulLight', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 /* Header Override for Brand Page */
 .common-header {
     position: relative;
+    border: 1px solid var(--color-border) !important;
 }
 
 /* Brand Page 전용 햄버거 메뉴 및 코너 타이틀 크기 조정 */
@@ -48,6 +57,12 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    scroll-snap-align: start;
+}
+
+/* Footer */
+.bottom-labels {
+    scroll-snap-align: start;
 }
 
 /* Brand Hero Section - 별도 스타일 */
@@ -240,7 +255,7 @@ body {
 
 .brand-section .common-header .hamburger {
     font-family: var(--font-primary) !important;
-    font-size: var(--text-lg) !important;
+    font-size: clamp(1.625rem, 2.6vw, 2.275rem) !important;
     font-weight: 400 !important;
     color: var(--color-text-primary) !important;
     transition: var(--transition-fast) !important;
@@ -254,11 +269,15 @@ body {
 
 .brand-section .common-header .corner-title {
     font-family: var(--font-medium) !important;
-    font-size: var(--text-xs) !important;
+    font-size: clamp(0.91rem, 1.95vw, 1.3rem) !important;
     font-weight: 500 !important;
     letter-spacing: 0.15em !important;
     text-transform: uppercase !important;
     color: var(--color-text-muted) !important;
+    max-width: 130px !important;
+    overflow: hidden !important;
+    white-space: normal !important;
+    line-height: 0.95 !important;
 }
 
 .brand-grid {
