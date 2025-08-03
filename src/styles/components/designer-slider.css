@@ -1,0 +1,36 @@
+/* ===== Designer Page Slider ===== */
+.collection-slider {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.collection-slider .slider-images {
+    display: flex;
+    gap: 2vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.collection-slider .slide-image {
+    width: 40vw;
+    height: 80vh;
+    display: none;
+}
+
+.collection-slider .slide-image:nth-child(1),
+.collection-slider .slide-image:nth-child(2) {
+    display: block;
+}
+
+.collection-slider .slide-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.collection-slider .arrow {
+    font-size: calc(1rem * 3);
+}
