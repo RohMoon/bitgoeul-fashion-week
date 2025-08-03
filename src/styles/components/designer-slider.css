@@ -20,8 +20,7 @@
     display: none;
 }
 
-.collection-slider .slide-image:nth-child(1),
-.collection-slider .slide-image:nth-child(2) {
+.collection-slider .slide-image.active {
     display: block;
 }
 
