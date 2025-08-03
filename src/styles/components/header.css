@@ -130,12 +130,12 @@
 /* Corner Title */
 .corner-title {
     font-family: var(--font-medium);
-    font-size: clamp(0.85rem, 1.7vw, 1.17rem);
+    font-size: clamp(0.91rem, 1.95vw, 1.3rem);
     font-weight: 500;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.15em;
     text-transform: uppercase;
     color: var(--color-text-muted);
-    max-width: 135px;
+    max-width: 130px;
     overflow: hidden;
     white-space: normal;
     line-height: 0.95;
