@@ -221,6 +221,13 @@ body {
     text-shadow: 4px 4px 16px rgba(0, 0, 0, 0.3);
 }
 
+.hero-logo {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
 
 .designers-section {
     background: var(--color-accent);

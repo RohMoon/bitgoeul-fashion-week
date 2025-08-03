@@ -43,14 +43,18 @@ body {
 }
 
 .poster-image {
-    width: auto;
+    /*width: auto;*/
     height: calc(90vh - 4rem);
-    max-width: 90%;
-    max-height: 90%;
-    aspect-ratio: 3/4;
+    /*height: 100%;*/
+    /*max-width: 90%;*/
+    max-width: 100%;
+    /*max-height: 90%;*/
+    /*max-height: 100%;*/
+    /*aspect-ratio: 3/4;*/
     object-fit: contain;
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-soft);
+
+    /*border-radius: var(--radius-lg);*/
+    /*box-shadow: var(--shadow-soft);*/
 }
 
 /* Junior Info Section */
@@ -99,6 +103,8 @@ body {
 
 .description {
     margin-bottom: var(--spacing-lg);
+    height: 90vh;
+    overflow-y: auto;
 }
 
 .description p {
@@ -113,7 +119,7 @@ body {
     font-family: 'BitgoeulBold', sans-serif;
     font-weight: bold;
     margin-bottom: var(--spacing-md);
-    font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+    font-size: clamp(0.9rem, 1.2vw, 1.2rem);
 }
 
 .description p strong {
