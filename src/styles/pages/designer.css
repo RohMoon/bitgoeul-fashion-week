@@ -3,9 +3,13 @@
 /* Base Font for Designer Page */
 body {
     font-family: 'BitgoeulLight', sans-serif;
+    margin: 0;
+    padding: 0;
     overflow-x: hidden;
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
+    height: 100vh;
+    overflow-y: scroll;
 }
 
 /* Scroll Snap Container */
@@ -241,14 +245,6 @@ body {
     opacity: 1;
 }
 
-/* Scroll Guide */
-.scroll-guide {
-    text-align: center;
-    margin-top: var(--spacing-md);
-    font-size: 0.875rem;
-    color: var(--color-gray-dark);
-    font-family: 'BitgoeulLight', sans-serif;
-}
 
 /* Bottom Labels */
 .bottom-labels {

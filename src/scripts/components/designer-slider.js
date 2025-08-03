@@ -1,59 +1,53 @@
 /**
  * Designer Page Slider Component
- * Simple slider with basic navigation
+ * Display-based slider showing 2 images at a time
  */
 
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Designer slider script loaded');
     
-    const slider = document.querySelector('.collection-slider .slider-images');
     const slides = Array.from(document.querySelectorAll('.collection-slider .slide-image'));
     const leftArrow = document.querySelector('.collection-slider .arrow.left');
     const rightArrow = document.querySelector('.collection-slider .arrow.right');
 
-    if (!slider || !slides.length || !leftArrow || !rightArrow) {
+    if (!slides.length || !leftArrow || !rightArrow) {
         console.warn('Designer slider elements not found');
         return;
     }
 
     let currentIndex = 0;
     const slidesToShow = 2; // 2개씩 보여줌
-    const maxIndex = Math.max(0, slides.length - slidesToShow);
+    const totalGroups = Math.ceil(slides.length / slidesToShow); // 총 그룹 개수
 
-    function getSlideWidth() {
-        return (window.innerWidth - 300) / 2; // 18.75rem = 300px
-    }
+    function showSlides() {
+        // 모든 슬라이드 숨김
+        slides.forEach(slide => {
+            slide.classList.remove('active');
+        });
 
-    function updateSlider() {
-        const slideWidth = getSlideWidth();
-        const gap = 0; // CSS gap: 0와 일치
-        const marginRight = -16; // CSS margin-right: -1rem = -16px와 일치
-        const offset = currentIndex * (slideWidth + gap + marginRight);
+        // 현재 그룹의 2개 슬라이드만 표시
+        const startIndex = currentIndex * slidesToShow;
+        const endIndex = Math.min(startIndex + slidesToShow, slides.length);
         
-        slider.style.transform = `translateX(-${offset}px)`;
-        slider.style.transition = 'transform 0.3s ease-in-out';
+        for (let i = startIndex; i < endIndex; i++) {
+            if (slides[i]) {
+                slides[i].classList.add('active');
+            }
+        }
         
-        console.log('Slider updated:', { currentIndex, offset, slideWidth });
+        console.log(`Showing slides ${startIndex + 1}-${endIndex} (group ${currentIndex + 1}/${totalGroups})`);
     }
 
     function nextSlide() {
-        console.log('Next slide clicked, current:', currentIndex, 'max:', maxIndex);
-        if (currentIndex < maxIndex) {
-            currentIndex++;
-        } else {
-            currentIndex = 0; // 끝에서 처음으로
-        }
-        updateSlider();
+        console.log('Next slide clicked, current group:', currentIndex + 1, 'total groups:', totalGroups);
+        currentIndex = (currentIndex + 1) % totalGroups; // 다음 그룹, 마지막에서 첫 번째로
+        showSlides();
     }
 
     function prevSlide() {
-        console.log('Prev slide clicked, current:', currentIndex);
-        if (currentIndex > 0) {
-            currentIndex--;
-        } else {
-            currentIndex = maxIndex; // 처음에서 끝으로
-        }
-        updateSlider();
+        console.log('Prev slide clicked, current group:', currentIndex + 1);
+        currentIndex = (currentIndex - 1 + totalGroups) % totalGroups; // 이전 그룹, 첫 번째에서 마지막으로
+        showSlides();
     }
 
     // Event listeners
@@ -69,13 +63,8 @@ document.addEventListener('DOMContentLoaded', () => {
         prevSlide();
     });
 
-    // Initialize
-    updateSlider();
+    // Initialize - 첫 번째 그룹 표시
+    showSlides();
 
-    // Handle resize
-    window.addEventListener('resize', () => {
-        updateSlider();
-    });
-
-    console.log('Slider initialized with', slides.length, 'slides');
+    console.log(`Slider initialized with ${slides.length} slides, ${totalGroups} groups`);
 });
