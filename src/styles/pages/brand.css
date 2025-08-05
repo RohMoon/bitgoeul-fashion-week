@@ -111,7 +111,7 @@ body {
 /* Section Title */
 .section-title {
     font-family: 'BitgoeulBold', sans-serif;
-    font-size: 1.8rem;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
     font-weight: bold;
     margin-bottom: var(--spacing-sm);
     text-align: center;

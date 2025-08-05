@@ -259,7 +259,7 @@ body {
     color: var(--color-text-primary);
     text-transform: none;
     margin-bottom: var(--spacing-lg);
-    text-align: center;
+    text-align: left;
     max-width: 100%;
 }
 

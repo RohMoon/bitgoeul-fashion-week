@@ -142,19 +142,42 @@ body {
 .designer-profile {
     display: flex;
     align-items: flex-start;
-    justify-content: center;
-    gap: var(--spacing-md);
-    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: var(--spacing-xl);
+    flex-wrap: nowrap;
     text-align: left;
     width: 100%;
     max-width: 100%;
     background: var(--color-white);
     backdrop-filter: none;
     border-radius: var(--radius-xl);
-    padding: var(--spacing-md);
+    padding: calc(var(--spacing-md) * 0.6) var(--spacing-md);
     border: 1px solid var(--color-border);
     transition: var(--transition-normal);
     box-shadow: var(--shadow-soft);
+}
+
+/* Profile Image Section */
+.profile-image-section {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 40%;
+    min-width: 200px;
+    height: 100%;
+    padding: 5% 0;
+}
+
+/* Profile Text Section */
+.profile-text-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+    min-width: 400px;
+    height: 100%;
 }
 
 .designer-profile:hover {
@@ -164,8 +187,8 @@ body {
 }
 
 .profile-image {
-    width: clamp(10rem, 15vw, 14rem);
-    height: clamp(15rem, 22.5vw, 21rem);
+    width: clamp(13rem, 19.5vw, 18.2rem);
+    height: clamp(19.5rem, 29.25vw, 27.3rem);
     background-color: var(--color-gray-medium);
     background-size: cover;
     background-position: center;
@@ -183,22 +206,36 @@ body {
     filter: grayscale(0%) contrast(1.1);
 }
 
+/* Profile Text Top Section - for h3 and brand logo */
+.profile-text-top {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 100%;
+    height: 47.5%;
+    margin-top: 30%;
+    margin-bottom: 2.5%;
+}
+
+/* Profile Text Bottom Section - for description */
+.profile-text-bottom {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: flex-end;
+}
+
 .text-logo-container {
     display: flex;
-    align-items: center;
-    gap: var(--spacing-lg);
-    justify-content: flex-start;
-    flex: 1;
+    flex-direction: column;
+    height: clamp(19.5rem, 29.25vw, 27.3rem);
     min-width: 300px;
 }
 
-.text-content {
-    flex: 1;
+.profile-text {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    transform: none;
-    min-width: 250px;
+    height: clamp(19.5rem, 29.25vw, 27.3rem);
 }
 
 .profile-text h3 {
@@ -208,21 +245,24 @@ body {
     text-transform: none;
     letter-spacing: -0.01em;
     color: var(--color-text-primary);
-    margin: 0 0 var(--spacing-sm) 0;
+    margin: 0;
+    line-height: 1;
 }
 
-.profile-text p {
+.profile-text-bottom p {
     font-family: var(--font-primary);
     font-size: clamp(0.8rem, 1vw, 0.95rem);
     max-width: 50rem;
-    line-height: 1.5;
+    line-height: 1.4;
     font-weight: 400;
     color: var(--color-text-secondary);
     text-align: left;
+    margin: 0;
+    padding: 0;
 }
 
 .brand-logo {
-    width: clamp(5rem, 10vw, 8rem);
+    width: clamp(4rem, 8vw, 6rem);
     height: auto;
     flex-shrink: 0;
     opacity: 0.9;
@@ -235,8 +275,8 @@ body {
     transform: none;
     transition: var(--transition-normal);
     filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
-    margin: var(--spacing-md) 0;
-    align-self: center;
+    margin: 0;
+    display: block;
 }
 
 .brand-logo:hover {
