@@ -163,10 +163,10 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    width: 30%;
-    min-width: 200px;
+    width: 38%;
+    min-width: 280px;
     height: 100%;
-    padding: 5% 0;
+    padding: 2% 0;
 }
 
 /* Profile Text Section */
@@ -175,8 +175,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 60%;
-    min-width: 400px;
+    width: 55%;
+    min-width: 350px;
     height: 100%;
 }
 
@@ -187,8 +187,8 @@ body {
 }
 
 .profile-image {
-    width: clamp(14rem, 20vw, 19rem);
-    height: clamp(21rem, 30vw, 28.5rem);
+    width: clamp(16rem, 25vw, 24rem);
+    height: clamp(24rem, 37vw, 36rem);
     background-color: var(--color-gray-medium);
     background-size: cover;
     background-position: center;

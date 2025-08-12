@@ -14,29 +14,30 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
-    const visibleCount = getVisibleCount();
     let currentIndex = 0;
-
-    function getVisibleCount() {
-        return window.innerWidth <= 768 ? 1 : 3;
-    }
+    const cardsPerView = 4; // 한 번에 보여줄 카드 수
+    const totalCards = cards.length;
+    const totalSlides = Math.ceil(totalCards / cardsPerView);
 
     function updateSlide() {
-        const cardWidth = cards[0].offsetWidth;
-        const gap = parseInt(getComputedStyle(track).gap) || 40;
-        const offset = (cardWidth + gap) * currentIndex;
-        track.style.transform = `translateX(-${offset}px)`;
+        // 첫 번째 카드의 실제 너비 가져오기
+        const firstCard = cards[0];
+        const cardWidth = firstCard.offsetWidth;
+        const gap = 24; // 1.5rem = 24px
+        
+        // 정확히 4개씩 이동하기 위한 거리 계산
+        const moveDistance = currentIndex * cardsPerView * (cardWidth + gap);
+        
+        track.style.transform = `translateX(-${moveDistance}px)`;
     }
 
     function nextSlide() {
-        const maxIndex = cards.length - getVisibleCount();
-        currentIndex = currentIndex < maxIndex ? currentIndex + 1 : 0;
+        currentIndex = (currentIndex + 1) % totalSlides;
         updateSlide();
     }
 
     function prevSlide() {
-        const maxIndex = cards.length - getVisibleCount();
-        currentIndex = currentIndex > 0 ? currentIndex - 1 : maxIndex;
+        currentIndex = currentIndex > 0 ? currentIndex - 1 : totalSlides - 1;
         updateSlide();
     }
 
@@ -44,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
     rightBtn.addEventListener('click', nextSlide);
     leftBtn.addEventListener('click', prevSlide);
 
-    // Auto-play (optional)
+    // Auto-play
     let autoPlayInterval;
     
     function startAutoPlay() {
@@ -67,10 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', () => {
         clearTimeout(resizeTimeout);
         resizeTimeout = setTimeout(() => {
-            const maxIndex = cards.length - getVisibleCount();
-            if (currentIndex > maxIndex) {
-                currentIndex = maxIndex;
-            }
             updateSlide();
         }, 250);
     });

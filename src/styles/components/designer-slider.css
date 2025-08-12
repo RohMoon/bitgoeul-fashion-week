@@ -18,10 +18,24 @@
     width: 40vw;
     height: 80vh;
     display: none;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
 }
 
 .collection-slider .slide-image.active {
     display: block;
+    animation: smoothFadeIn 0.6s ease-in-out forwards;
+}
+
+@keyframes smoothFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .collection-slider .slide-image img {

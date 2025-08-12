@@ -66,5 +66,41 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize - 첫 번째 그룹 표시
     showSlides();
 
-    console.log(`Slider initialized with ${slides.length} slides, ${totalGroups} groups`);
+    // Auto-play functionality - 3초마다 자동 이동
+    let autoPlayInterval;
+    
+    function startAutoPlay() {
+        autoPlayInterval = setInterval(() => {
+            nextSlide();
+        }, 2000); // 2초마다 이동
+    }
+    
+    function stopAutoPlay() {
+        if (autoPlayInterval) {
+            clearInterval(autoPlayInterval);
+        }
+    }
+    
+    // Start auto-play
+    startAutoPlay();
+    
+    // Pause on hover
+    const sliderContainer = document.querySelector('.collection-slider');
+    if (sliderContainer) {
+        sliderContainer.addEventListener('mouseenter', stopAutoPlay);
+        sliderContainer.addEventListener('mouseleave', startAutoPlay);
+    }
+    
+    // Also stop auto-play when arrows are clicked, then restart after a delay
+    rightArrow.addEventListener('click', () => {
+        stopAutoPlay();
+        setTimeout(startAutoPlay, 5000); // 5초 후 다시 시작
+    });
+    
+    leftArrow.addEventListener('click', () => {
+        stopAutoPlay();
+        setTimeout(startAutoPlay, 5000); // 5초 후 다시 시작
+    });
+
+    console.log(`Slider initialized with ${slides.length} slides, ${totalGroups} groups, auto-play enabled`);
 });
