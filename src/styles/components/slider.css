@@ -61,7 +61,7 @@
 .designers-section .card {
     flex: 0 0 calc((100% - 4.5rem) / 4);
     width: calc((100% - 4.5rem) / 4);
-    aspect-ratio: 3/4;
+    aspect-ratio: 2/3;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
