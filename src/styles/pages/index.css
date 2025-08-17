@@ -260,7 +260,7 @@ body {
 }
 
 .contact-container {
-    border: 2px solid var(--color-black);
+    border: none;
     border-radius: var(--radius-md);
     padding: clamp(2rem, 4vw, 3rem);
     background: transparent;
