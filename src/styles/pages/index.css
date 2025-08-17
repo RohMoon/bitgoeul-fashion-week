@@ -53,6 +53,103 @@ body {
         font-size: clamp(2rem, 10vw, 4rem);
         line-height: 1.1;
     }
+    
+    .photo-section {
+        height: auto;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .photo-section h3 {
+        display: none;
+    }
+    
+    .photo-section .video-container {
+        margin: 0 !important;
+        padding-bottom: 56.25% !important;
+        width: 100%;
+    }
+    
+    .designers-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: var(--spacing-lg) var(--spacing-sm);
+    }
+    
+    .designers-section h2 {
+        margin-bottom: var(--spacing-lg);
+        text-align: left;
+    }
+    
+    .designers-section .slider-container {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .contact-section {
+        align-items: center !important;
+        padding: var(--spacing-lg) var(--spacing-sm);
+        padding-right: var(--spacing-sm) !important;
+    }
+    
+    .contact-container {
+        width: 90% !important;
+        max-width: 400px !important;
+        margin: 0 auto !important;
+        padding: var(--spacing-lg);
+        box-sizing: border-box;
+        border: none !important;
+        background: transparent !important;
+        backdrop-filter: none !important;
+        box-shadow: none !important;
+    }
+    
+    .contact-section h3 {
+        text-align: center;
+        width: 100%;
+        font-size: 1.8rem;
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .contact-section form {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        background: transparent !important;
+        border: none !important;
+    }
+    
+    .contact-section form label {
+        display: block;
+        width: 100%;
+        margin-bottom: var(--spacing-xs);
+    }
+    
+    .contact-section form input,
+    .contact-section form textarea {
+        width: 100% !important;
+        padding: 0.875rem !important;
+        box-sizing: border-box !important;
+        font-size: 16px;
+        background: rgba(255, 255, 255, 0.9);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        color: var(--color-black);
+    }
+    
+    .contact-section form button {
+        width: 100% !important;
+        padding: 0.875rem !important;
+        margin-top: var(--spacing-sm);
+        background: var(--color-white);
+        color: var(--color-black);
+    }
 
     .hero-section {
         min-height: 80vh;
@@ -136,11 +233,16 @@ body {
     flex-direction: column;
     scroll-snap-align: start;
     box-sizing: border-box;
+    background-image: url('../../assets/images/index/contact-background.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #000;
 }
 
 /* Contact Section */
 .contact-section {
-    /*background: var(--color-black);*/
+    position: relative;
     padding: var(--spacing-2xl) var(--spacing-md);
     text-align: center;
     color: var(--color-white);
@@ -148,7 +250,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
+    padding-right: 4%;
     width: 100%;
     box-sizing: border-box;
     position: relative;
@@ -160,16 +263,16 @@ body {
     border: 2px solid var(--color-black);
     border-radius: var(--radius-md);
     padding: clamp(2rem, 4vw, 3rem);
-    background: var(--color-white);
+    background: transparent;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     max-width: min(85vw, 50rem);
-    width: 100%;
+    width: 45%;
+    position: relative;
 }
 
 .contact-section h3 {
     font-family: var(--font-bold);
-    /*color: var(--color-white);*/
-    color: var(--color-black);
+    color: var(--color-white);
     font-size: var(--text-4xl);
     font-weight: 700;
     text-transform: uppercase;
@@ -203,11 +306,12 @@ body {
 
 /* Bottom Labels */
 .bottom-labels {
-    background: var(--color-white);
+    background: transparent;
     text-align: center;
     padding: var(--spacing-md) var(--spacing-sm);
     font-family: var(--font-medium);
     font-size: 1rem;
+    color: var(--color-white);
     display: flex;
     align-items: center;
     justify-content: center;

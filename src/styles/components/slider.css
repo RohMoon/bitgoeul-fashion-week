@@ -99,6 +99,31 @@
     right: 0;
 }
 
+/* Mobile support */
+@media (max-width: 768px) {
+    .designers-section .slider-viewport {
+        width: 80%;
+        margin: 0 10%;
+        overflow: hidden !important;
+        position: relative;
+    }
+    
+    .designers-section .card {
+        flex: 0 0 100%;
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+    }
+    
+    .designers-section .slider-track {
+        gap: 2rem;
+    }
+    
+    .designers-section .arrow {
+        font-size: 2rem;
+    }
+}
+
 /* Ultra-wide screen support */
 @media (min-width: 2560px) {
     .designers-section .card img {
