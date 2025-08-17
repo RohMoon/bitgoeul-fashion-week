@@ -16,8 +16,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     let currentIndex = 0;
-    const slidesToShow = 2; // 2개씩 보여줌
-    const totalGroups = Math.ceil(slides.length / slidesToShow); // 총 그룹 개수
+    // 모바일에서는 1개, 데스크톱에서는 2개씩 보여줌
+    const isMobile = window.innerWidth <= 768;
+    const slidesToShow = isMobile ? 1 : 2;
+    let totalGroups = Math.ceil(slides.length / slidesToShow); // 총 그룹 개수
+    
+    // 화면 크기 변경 시 재계산
+    window.addEventListener('resize', () => {
+        const newIsMobile = window.innerWidth <= 768;
+        const newSlidesToShow = newIsMobile ? 1 : 2;
+        if (newSlidesToShow !== slidesToShow) {
+            location.reload(); // 간단한 방법으로 리로드
+        }
+    });
 
     function showSlides() {
         // 모든 슬라이드 숨김

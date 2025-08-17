@@ -25,10 +25,7 @@ body {
     font-size: clamp(1.5rem, 2.5vw, 2rem) !important;
 }
 
-.brand-section .common-header .corner-title {
-    font-family: 'BitgoeulBold', sans-serif;
-    font-size: clamp(0.8rem, 1.2vw, 1rem) !important;
-}
+/* 코너 타이틀은 header.css의 기본 스타일 사용 */
 
 /* Brand Page 전용 드롭다운 메뉴 크기 조정 */
 .brand-section .common-header .dropdown-menu {
@@ -275,18 +272,7 @@ body {
     color: var(--color-text-secondary) !important;
 }
 
-.brand-section .common-header .corner-title {
-    font-family: var(--font-medium) !important;
-    font-size: clamp(0.91rem, 1.95vw, 1.3rem) !important;
-    font-weight: 500 !important;
-    letter-spacing: 0.15em !important;
-    text-transform: uppercase !important;
-    color: var(--color-text-muted) !important;
-    max-width: 130px !important;
-    overflow: hidden !important;
-    white-space: normal !important;
-    line-height: 0.95 !important;
-}
+/* 코너 타이틀은 header.css의 기본 스타일 사용 */
 
 .brand-grid {
     width: 85vw !important;

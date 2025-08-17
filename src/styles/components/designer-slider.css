@@ -47,3 +47,23 @@
 .collection-slider .arrow {
     font-size: calc(1rem * 3);
 }
+
+/* Mobile Responsive */
+@media (max-width: 48rem) {
+    .collection-slider .slider-images {
+        gap: 1vh;
+    }
+    
+    .collection-slider .slide-image {
+        width: 80vw;
+        height: 70vh;
+    }
+    
+    .collection-slider .slide-image:not(.active) {
+        display: none !important;
+    }
+    
+    .collection-slider .arrow {
+        font-size: 2rem;
+    }
+}

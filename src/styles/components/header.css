@@ -156,21 +156,63 @@
 
 /* Responsive Styles */
 @media (max-width: 48rem) {
-    .common-header .hamburger {
-        font-size: 2.7rem;
+    .common-header {
+        padding: var(--spacing-xs) var(--spacing-sm);
+        min-height: 3.5rem;
     }
 
-    .common-header .corner-title {
-        font-size: 1rem;
+    .header-row {
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .hamburger {
+        font-size: 1.8rem !important;
+    }
+
+    .corner-title {
+        font-size: clamp(0.8rem, 1.5vw, 0.95rem) !important;
+        max-width: 110px;
+        top: 50%;
+        transform: translateY(-50%);
+        right: var(--spacing-sm);
+        line-height: 0.95;
+    }
+
+    .dropdown-menu {
+        min-width: 10rem;
+    }
+
+    .dropdown-menu li a {
+        font-size: 0.875rem;
+        padding: var(--spacing-xs) var(--spacing-sm);
     }
 }
 
 @media (max-width: 30rem) {
-    .common-header .hamburger {
-        font-size: 2.5rem;
+    .common-header {
+        padding: 0.5rem;
+        min-height: 3rem;
     }
 
-    .common-header .corner-title {
-        font-size: 1.75rem;
+    .hamburger {
+        font-size: 1.5rem !important;
+    }
+
+    .corner-title {
+        font-size: clamp(0.7rem, 1.2vw, 0.85rem) !important;
+        max-width: 90px;
+        line-height: 0.9;
+    }
+
+    .dropdown-menu {
+        min-width: 9rem;
+        left: 0;
+        right: auto;
+    }
+
+    .dropdown-menu li a {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
     }
 }
