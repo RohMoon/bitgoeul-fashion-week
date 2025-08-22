@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BACO - Bitgoeul Fashion Week</title>
+
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="src/styles/base/variables.css">
+  <link rel="stylesheet" href="src/styles/base/fonts.css">
+  <link rel="stylesheet" href="src/styles/base/reset.css">
+  <link rel="stylesheet" href="src/styles/base/utilities.css">
+  <link rel="stylesheet" href="src/styles/components/header.css">
+  <link rel="stylesheet" href="src/styles/pages/designer.css">
+  <link rel="stylesheet" href="src/styles/components/designer-slider.css">
+</head>
+<body>
+<!-- First Section: Header + Designer Info -->
+<section class="header-designer-section">
+  <!-- Header -->
+  <header class="common-header">
+    <div class="header-row">
+      <!-- Hamburger Menu -->
+      <div class="hamburger-wrapper">
+        <button class="hamburger" id="hamburgerBtn">☰</button>
+        <ul class="dropdown-menu" id="dropdownMenu">
+          <li><a href="about.html">소개</a></li>
+          <li><a href="brand.html" class="brand-menu">BRANDS</a></li>
+          <li><a href="junior.html">주니어패션위크(Junior Fashion Week)</a></li>
+          <li><a href="index.html#contact">문의</a></li>
+        </ul>
+      </div>
+
+      <!-- Corner Title -->
+      <a href="index.html" class="corner-title font-bold">
+        <div>BITGOEUL</div>
+        <div>FASHION</div>
+        <div>WEEK</div>
+      </a>
+    </div>
+  </header>
+
+  <!-- Designer Info Section -->
+  <div class="designer-info">
+    <h2 class="section-title font-bold">DESIGNERS 2025</h2>
+    <div class="designer-profile">
+      <div class="profile-image-section">
+        <img class="profile-image" src="src/assets/images/designers/daisy/Designer-Portrait-Daisy-Rose-Cooper.jpg" alt="Daisy Profile">
+      </div>
+      <div class="profile-text-section">
+        <div class="profile-text">
+          <div class="text-logo-container">
+            <div class="profile-text-top">
+              <h3 class="font-bold">Daisy Rose</h3>
+              <img class="brand-logo" src="src/assets/images/brands/soh_daisy_logo.png" alt="Bitgoeul Fashion Week Logo">
+            </div>
+            <div class="profile-text-bottom">
+              <p class="font-light">
+                Daisy-Rose founded Sleight of Hand (SOH) on the cyclical concept of renewal through handmade culture.
+                SOH refines sustainable practice in contemporary fashion, with each capsule reflecting the evolving
+                connection between people, culture, and environment. Embracing dead-stock fabrics, circular
+                methodologies, and traditional craftsmanship, SOH designs honor the human form and natural world,
+                focusing on longevity. Through unique material, process, and collaboration, SOH creates a distinct
+                visual language, instilling essential, timeless nature into each piece.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Second Section: Collection Slider -->
+<section class="collection-slider">
+  <button class="arrow left">&#8249;</button>
+  <div class="slider-frame">
+    <div class="slider-images">
+      <div class="slide-image">
+        <img src="src/assets/images/designers/daisy/SOH_LOOK_1.jpg" alt="Collection 1">
+      </div>
+      <div class="slide-image">
+        <img src="src/assets/images/designers/daisy/SOH_LOOK_2.jpg" alt="Collection 2">
+      </div>
+      <div class="slide-image">
+        <img src="src/assets/images/designers/daisy/SOH_LOOK_3.jpg" alt="Collection 3">
+      </div>
+      <div class="slide-image">
+        <img src="src/assets/images/designers/daisy/SOH_LOOK_4.jpg" alt="Collection 4">
+      </div>
+      <div class="slide-image">
+        <img src="src/assets/images/designers/daisy/SOH_LOOK_5.jpg" alt="Collection 5">
+      </div>
+      <div class="slide-image">
+        <img src="src/assets/images/designers/daisy/SOH_LOOK_6.jpg" alt="Collection 6">
+      </div>
+      <div class="slide-image">
+        <img src="src/assets/images/designers/daisy/SOH_LOOK_7.jpg" alt="Collection 7">
+      </div>
+      <div class="slide-image">
+        <img src="src/assets/images/designers/daisy/SOH_LOOK_8.jpg" alt="Collection 8">
+      </div>
+      <div class="slide-image">
+        <img src="src/assets/images/designers/daisy/SOH_LOOK_9.jpg" alt="Collection 9">
+      </div>
+    </div>
+  </div>
+  <button class="arrow right">&#8250;</button>
+</section>
+
+
+<!-- Footer -->
+<footer class="bottom-labels font-medium">
+  &copy; 2025 Bitgoeul Designer Collection – All rights reserved.
+</footer>
+
+<!-- Scripts -->
+<script src="src/scripts/components/designer-slider.js"></script>
+<script src="src/scripts/components/navigation.js"></script>
+</body>
+</html>
