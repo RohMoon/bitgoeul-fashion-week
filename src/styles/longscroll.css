@@ -347,6 +347,98 @@ body {
     color: #ffffff;
 }
 
+/* Junior Section */
+.junior-section {
+    background: #0a0a0a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+}
+
+.junior-wrapper {
+    max-width: 1400px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.junior-text {
+    padding: 2rem;
+}
+
+.section-label {
+    display: inline-block;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.junior-text h2 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 100;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+}
+
+.junior-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #aaa;
+    margin-bottom: 2rem;
+}
+
+.junior-link {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    border: 1px solid #333;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+}
+
+.junior-link:hover {
+    background: #fff;
+    color: #000;
+    border-color: #fff;
+}
+
+.junior-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    height: 500px;
+}
+
+.junior-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.junior-img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.02);
+}
+
+.junior-img:nth-child(1) {
+    grid-row: span 2;
+}
+
+.junior-img:nth-child(4) {
+    grid-column: span 2;
+}
+
 /* Gallery Section */
 .gallery-section {
     background: #000000;
@@ -580,6 +672,14 @@ body {
         height: 50vh;
     }
     
+    .junior-wrapper {
+        grid-template-columns: 1fr;
+    }
+    
+    .junior-grid {
+        height: 400px;
+    }
+    
     .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
         grid-auto-rows: 250px;
@@ -621,6 +721,22 @@ body {
 
 /* Mobile screens */
 @media (max-width: 480px) {
+    .junior-text h2 {
+        font-size: 2rem;
+    }
+    
+    .junior-grid {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+    
+    .junior-img:nth-child(1),
+    .junior-img:nth-child(4) {
+        grid-row: span 1;
+        grid-column: span 1;
+        height: 250px;
+    }
+    
     .nav-wrapper {
         padding: 0.75rem 1rem;
     }
