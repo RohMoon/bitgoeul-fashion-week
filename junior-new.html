@@ -7,18 +7,31 @@
     <link rel="stylesheet" href="src/styles/base/variables.css">
     <link rel="stylesheet" href="src/styles/base/fonts.css">
     <link rel="stylesheet" href="src/styles/base/reset.css">
+    <link rel="stylesheet" href="src/styles/base/utilities.css">
+    <link rel="stylesheet" href="src/styles/components/header.css">
+    <link rel="stylesheet" href="src/styles/components/forms.css">
+    <link rel="stylesheet" href="src/styles/longscroll.css">
     <link rel="stylesheet" href="src/styles/junior-new.css">
 </head>
 <body>
     <!-- Fixed Navigation -->
-    <nav class="junior-nav">
-        <a href="index.html" class="nav-back">← Back</a>
-        <div class="nav-brand">JUNIOR FASHION WEEK</div>
-        <div class="nav-menu">
-            <a href="#about">About</a>
-            <a href="#gallery">Gallery</a>
-            <a href="#details">Details</a>
-            <a href="#apply">Apply</a>
+    <nav class="fixed-nav">
+        <div class="nav-wrapper">
+            <div class="nav-left">
+                <button class="hamburger" id="hamburgerBtn">☰</button>
+                <ul class="dropdown-menu" id="dropdownMenu">
+                    <li><a href="about.html">소개 (About)</a></li>
+                    <li><a href="junior-new.html">주니어패션위크 (Junior Fashion Week)</a></li>
+                    <li><a href="model-contest/index.html">모델콘테스트 (Model Contest)</a></li>
+                    <li><a href="#contact">문의 (Contact)</a></li>
+                </ul>
+            </div>
+            <div class="nav-center">
+                <a href="index.html" class="nav-logo">BITGOEUL FASHION WEEK</a>
+            </div>
+            <div class="nav-right">
+                <span class="scroll-indicator">Scroll</span>
+            </div>
         </div>
     </nav>
 
@@ -193,6 +206,7 @@
         </div>
     </footer>
 
+    <script src="src/scripts/components/navigation.js"></script>
     <script src="src/scripts/junior-new.js"></script>
 </body>
 </html>
