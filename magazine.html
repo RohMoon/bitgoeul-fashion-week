@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitgoeul Fashion Week Magazine</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="src/styles/base/variables.css">
+    <link rel="stylesheet" href="src/styles/base/fonts.css">
+    <link rel="stylesheet" href="src/styles/base/reset.css">
+    <link rel="stylesheet" href="src/styles/base/utilities.css">
+    <link rel="stylesheet" href="src/styles/components/header.css">
+    <link rel="stylesheet" href="src/styles/components/forms.css">
+    <link rel="stylesheet" href="src/styles/magazine.css">
+</head>
+<body>
+    <!-- Header & Hero Section -->
+    <section class="header-hero-section">
+        <header class="common-header">
+            <div class="header-row">
+                <!-- Hamburger Menu -->
+                <div class="hamburger-wrapper">
+                    <button class="hamburger" id="hamburgerBtn">☰</button>
+                    <ul class="dropdown-menu" id="dropdownMenu">
+                        <li><a href="about.html">소개</a></li>
+                        <li><a href="brand.html" class="brand-menu">BRANDS</a></li>
+                        <li><a href="junior.html">주니어패션위크(Junior Fashion Week)</a></li>
+                        <li><a href="#contact">문의</a></li>
+                    </ul>
+                </div>
+
+                <!-- Corner Title -->
+                <a href="index.html" class="corner-title font-bold">
+                    <div>BITGOEUL</div>
+                    <div>FASHION</div>
+                    <div>WEEK</div>
+                </a>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <div class="magazine-title">
+                <span class="issue-date">ISSUE 01 · JANUARY 2025</span>
+                <h1 class="magazine-logo">BITGOEUL</h1>
+                <p class="magazine-subtitle">The Fashion & Culture Magazine</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="content-section">
+        <!-- Cover Story Section -->
+        <section class="cover-story-section">
+            <div class="cover-story-grid">
+                <div class="cover-image">
+                    <img src="src/assets/images/index/main-baco.jpg" alt="Cover Story">
+                </div>
+                <div class="cover-content">
+                    <span class="section-label">COVER STORY</span>
+                    <h2>The New Wave</h2>
+                    <p class="lead-text">빛고을 패션위크가 선보이는 차세대 디자이너들의 혁신적인 컬렉션. 전통과 현대, 동양과 서양의 경계를 넘나드는 새로운 패션 언어.</p>
+                    <a href="#" class="read-link">Read Full Story →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Designer Showcase -->
+        <section class="designers-section">
+            <h2 class="section-title">Featured Designers</h2>
+            <div class="designers-grid">
+                <article class="designer-card">
+                    <div class="designer-image">
+                        <img src="src/assets/images/index/main-baco.jpg" alt="Baco">
+                        <div class="designer-overlay">
+                            <span class="designer-name">BACO92</span>
+                        </div>
+                    </div>
+                    <div class="designer-info">
+                        <h3>Baco92 Collection</h3>
+                        <p>도시적 감성과 스트리트 문화의 만남</p>
+                    </div>
+                </article>
+
+                <article class="designer-card">
+                    <div class="designer-image">
+                        <img src="src/assets/images/index/main-bianca.jpg" alt="Bianca">
+                        <div class="designer-overlay">
+                            <span class="designer-name">BIANCA NG</span>
+                        </div>
+                    </div>
+                    <div class="designer-info">
+                        <h3>Breaking Boundaries</h3>
+                        <p>전통과 현대를 넘나드는 독창적 디자인</p>
+                    </div>
+                </article>
+
+                <article class="designer-card">
+                    <div class="designer-image">
+                        <img src="src/assets/images/index/main-lebao.jpg" alt="LeBao">
+                        <div class="designer-overlay">
+                            <span class="designer-name">LE BAO</span>
+                        </div>
+                    </div>
+                    <div class="designer-info">
+                        <h3>Eastern Elegance</h3>
+                        <p>동양적 미학의 현대적 재해석</p>
+                    </div>
+                </article>
+
+                <article class="designer-card">
+                    <div class="designer-image">
+                        <img src="src/assets/images/index/main-daisy.jpg" alt="Daisy">
+                        <div class="designer-overlay">
+                            <span class="designer-name">SOH DAISY</span>
+                        </div>
+                    </div>
+                    <div class="designer-info">
+                        <h3>Natural Flow</h3>
+                        <p>자연에서 영감을 받은 유기적 실루엣</p>
+                    </div>
+                </article>
+
+                <article class="designer-card">
+                    <div class="designer-image">
+                        <img src="src/assets/images/index/main-Thesoulfw.jpg" alt="TheSoul">
+                        <div class="designer-overlay">
+                            <span class="designer-name">THE SOUL</span>
+                        </div>
+                    </div>
+                    <div class="designer-info">
+                        <h3>Soul Expression</h3>
+                        <p>내면의 목소리를 담은 아방가르드</p>
+                    </div>
+                </article>
+
+                <article class="designer-card">
+                    <div class="designer-image">
+                        <img src="src/assets/images/index/brand-lineUp.jpg" alt="More">
+                        <div class="designer-overlay">
+                            <span class="designer-name">MORE</span>
+                        </div>
+                    </div>
+                    <div class="designer-info">
+                        <h3>Coming Soon</h3>
+                        <p>더 많은 디자이너들을 만나보세요</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Editorial Section -->
+        <section class="editorial-section">
+            <div class="editorial-grid">
+                <article class="editorial-main">
+                    <img src="src/assets/images/designers/bianca/Look1.JPG" alt="Editorial">
+                    <div class="editorial-content">
+                        <span class="section-label">TREND REPORT</span>
+                        <h3>2025 S/S Fashion Forecast</h3>
+                        <p>올 시즌 주목해야 할 패션 트렌드와 새로운 실루엣. 지속가능성과 혁신이 만나는 지점.</p>
+                    </div>
+                </article>
+
+                <article class="editorial-side">
+                    <img src="src/assets/images/designers/daisy/SOH_LOOK_1.jpg" alt="Interview">
+                    <div class="editorial-content">
+                        <span class="section-label">EXCLUSIVE</span>
+                        <h3>Designer Interview</h3>
+                        <p>창작의 원천과 영감에 대한 이야기</p>
+                    </div>
+                </article>
+
+                <article class="editorial-side">
+                    <img src="src/assets/images/designers/leBao/look1.jpg" alt="Behind">
+                    <div class="editorial-content">
+                        <span class="section-label">BEHIND THE SCENES</span>
+                        <h3>Backstage Stories</h3>
+                        <p>런웨이 뒤에 숨겨진 이야기들</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Video Section -->
+        <section class="video-section">
+            <h2 class="section-title">Fashion Film</h2>
+            <div class="video-container">
+                <iframe 
+                    src="https://www.youtube.com/embed/NULMYAMMzVg?enablejsapi=1&mute=1" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+        <!-- Contact & Footer Section -->
+        <section class="contact-footer-section" id="contact">
+            <div class="contact-section">
+                <div class="contact-container">
+                    <h3 class="font-medium">Subscribe to Our Magazine</h3>
+                    <p class="subtitle font-light">최신 패션 트렌드와 독점 콘텐츠를 받아보세요</p>
+
+                    <form action="https://formspree.io/f/xnnzybrr" method="POST">
+                        <label>
+                            <input type="text" name="brand" placeholder="이름 (Name)" required>
+                        </label>
+                        <label>
+                            <input type="email" name="email" placeholder="이메일 주소 (Email address)" required>
+                        </label>
+                        <label>
+                            <textarea name="message" placeholder="메시지 (Message)" required></textarea>
+                        </label>
+                        <button type="submit" class="btn-primary">구독하기</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="bottom-labels font-medium">
+                &copy; 2025 Bitgoeul Fashion Week Magazine – All rights reserved.
+            </footer>
+        </section>
+    </main>
+
+    <!-- Scripts -->
+    <script src="src/scripts/components/navigation.js"></script>
+    <script src="src/scripts/components/youtube-autoplay.js"></script>
+</body>
+</html>

@@ -1,0 +1,593 @@
+/* Magazine Style CSS - Based on index.html structure */
+
+/* Header Hero Section */
+.header-hero-section {
+    background: #000000;
+    min-height: 50vh;
+    position: relative;
+    margin-bottom: 0;
+}
+
+/* Hero Section Magazine Style */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 2rem 3rem;
+    text-align: center;
+}
+
+.magazine-title {
+    max-width: 800px;
+}
+
+.issue-date {
+    display: inline-block;
+    color: #999999;
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+.magazine-logo {
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 100;
+    letter-spacing: 15px;
+    color: #ffffff;
+    margin: 0 0 1rem 0;
+    line-height: 1;
+    font-family: 'Georgia', serif;
+}
+
+.magazine-subtitle {
+    color: #cccccc;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+/* Content Section */
+.content-section {
+    background: #ffffff;
+    padding: 0;
+}
+
+/* Cover Story Section */
+.cover-story-section {
+    padding: 5rem 2rem;
+    background: #f8f8f8;
+    margin: 0;
+}
+
+.cover-story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.cover-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: filter 0.5s ease;
+}
+
+.cover-image img:hover {
+    filter: grayscale(0%);
+}
+
+.cover-content {
+    padding: 2rem;
+}
+
+.section-label {
+    display: inline-block;
+    background: #000000;
+    color: #ffffff;
+    padding: 0.25rem 1rem;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.cover-content h2 {
+    font-size: 3rem;
+    font-weight: 100;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+    letter-spacing: -1px;
+}
+
+.lead-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333333;
+    margin-bottom: 2rem;
+}
+
+.read-link {
+    color: #000000;
+    text-decoration: none;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #000000;
+    padding-bottom: 0.25rem;
+    transition: all 0.3s ease;
+}
+
+.read-link:hover {
+    padding-left: 10px;
+}
+
+/* Designers Section */
+.designers-section {
+    padding: 5rem 2rem;
+    background: #000000;
+    margin: 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 100;
+    margin-bottom: 3rem;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+
+.designers-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.designer-card {
+    background: #ffffff;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.designer-card:hover {
+    transform: translateY(-10px);
+}
+
+.designer-image {
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+}
+
+.designer-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.designer-card:hover .designer-image img {
+    transform: scale(1.1);
+}
+
+.designer-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    padding: 2rem 1rem 1rem;
+}
+
+.designer-name {
+    color: #ffffff;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.designer-info {
+    padding: 1.5rem;
+    background: #ffffff;
+}
+
+.designer-info h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+
+.designer-info p {
+    color: #666666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Editorial Section */
+.editorial-section {
+    padding: 5rem 2rem;
+    background: #f8f8f8;
+    margin: 0;
+}
+
+.editorial-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.editorial-main {
+    grid-row: span 2;
+}
+
+.editorial-main img,
+.editorial-side img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.editorial-main img {
+    height: 500px;
+}
+
+.editorial-content {
+    padding: 1.5rem;
+    background: #ffffff;
+}
+
+.editorial-content h3 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin: 1rem 0;
+    line-height: 1.3;
+}
+
+.editorial-content p {
+    color: #666666;
+    line-height: 1.6;
+}
+
+/* Video Section */
+.video-section {
+    padding: 5rem 2rem;
+    background: #ffffff;
+    margin: 0;
+}
+
+.video-section .section-title {
+    color: #000000;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #000000;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Contact Footer Section */
+.contact-footer-section {
+    background: #000000;
+    color: #ffffff;
+    margin: 0;
+}
+
+.contact-section {
+    padding: 5rem 2rem;
+    border-top: 1px solid #333333;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-container h3 {
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+.contact-container .subtitle {
+    color: #999999;
+    margin-bottom: 3rem;
+}
+
+.contact-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-container input,
+.contact-container textarea {
+    padding: 1rem;
+    background: transparent;
+    border: 1px solid #666666;
+    color: #ffffff;
+    font-size: 0.95rem;
+}
+
+.contact-container input::placeholder,
+.contact-container textarea::placeholder {
+    color: #999999;
+}
+
+.contact-container textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.btn-primary {
+    padding: 1rem 2rem;
+    background: #ffffff;
+    color: #000000;
+    border: none;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+.bottom-labels {
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid #333333;
+    color: #666666;
+    font-size: 0.85rem;
+}
+
+/* Responsive Design */
+
+/* Ultra-wide screens (4K, 5K displays) */
+@media (min-width: 2560px) {
+    .cover-story-grid {
+        max-width: 1800px;
+        gap: 6rem;
+    }
+    
+    .cover-content h2 {
+        font-size: 4rem;
+    }
+    
+    .cover-image img {
+        height: 700px;
+    }
+    
+    .designers-grid {
+        max-width: 1800px;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .section-title {
+        font-size: 3.5rem;
+    }
+    
+    .designer-image {
+        height: 450px;
+    }
+    
+    .editorial-grid {
+        max-width: 1800px;
+    }
+    
+    .video-container {
+        max-width: 1400px;
+    }
+}
+
+/* Wide screens (1440p, QHD) */
+@media (min-width: 1920px) and (max-width: 2559px) {
+    .cover-story-grid {
+        max-width: 1600px;
+    }
+    
+    .designers-grid {
+        max-width: 1600px;
+    }
+    
+    .editorial-grid {
+        max-width: 1600px;
+    }
+    
+    .video-container {
+        max-width: 1200px;
+    }
+}
+
+/* Laptop screens */
+@media (max-width: 1024px) {
+    .designers-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .editorial-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .editorial-main {
+        grid-row: span 1;
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+    .magazine-logo {
+        font-size: 2rem;
+        letter-spacing: 4px;
+    }
+    
+    .issue-date {
+        font-size: 0.65rem;
+        letter-spacing: 2px;
+    }
+    
+    .magazine-subtitle {
+        font-size: 0.85rem;
+    }
+    
+    .cover-story-grid {
+        padding: 0 1rem;
+    }
+    
+    .cover-content {
+        padding: 1rem;
+    }
+    
+    .cover-content h2 {
+        font-size: 1.75rem;
+    }
+    
+    .lead-text {
+        font-size: 0.95rem;
+    }
+    
+    .cover-image img {
+        height: 300px;
+    }
+    
+    .designers-section {
+        padding: 3rem 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+    }
+    
+    .designer-image {
+        height: 250px;
+    }
+    
+    .designer-info {
+        padding: 1rem;
+    }
+    
+    .designer-info h3 {
+        font-size: 1rem;
+    }
+    
+    .designer-info p {
+        font-size: 0.85rem;
+    }
+    
+    .editorial-section {
+        padding: 3rem 1rem;
+    }
+    
+    .editorial-content {
+        padding: 1rem;
+    }
+    
+    .editorial-content h3 {
+        font-size: 1.2rem;
+    }
+    
+    .editorial-content p {
+        font-size: 0.9rem;
+    }
+    
+    .editorial-main img,
+    .editorial-side img {
+        height: 200px;
+    }
+    
+    .video-section {
+        padding: 3rem 1rem;
+    }
+    
+    .contact-container h3 {
+        font-size: 1.5rem;
+    }
+    
+    .contact-container .subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .contact-container input,
+    .contact-container textarea {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+    
+    .btn-primary {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Tablet screens */
+@media (max-width: 768px) {
+    .magazine-logo {
+        font-size: clamp(2rem, 6vw, 4rem);
+        letter-spacing: 8px;
+    }
+    
+    .cover-story-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .cover-content h2 {
+        font-size: 2.5rem;
+    }
+    
+    .designers-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .designer-image {
+        height: 300px;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+/* Small mobile screens */
+@media (max-width: 360px) {
+    .magazine-logo {
+        font-size: 1.75rem;
+    }
+    
+    .cover-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+}

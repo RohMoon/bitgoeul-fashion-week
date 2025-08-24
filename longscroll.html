@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitgoeul Fashion Week - Long Scroll</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="src/styles/base/variables.css">
+    <link rel="stylesheet" href="src/styles/base/fonts.css">
+    <link rel="stylesheet" href="src/styles/base/reset.css">
+    <link rel="stylesheet" href="src/styles/base/utilities.css">
+    <link rel="stylesheet" href="src/styles/components/header.css">
+    <link rel="stylesheet" href="src/styles/components/forms.css">
+    <link rel="stylesheet" href="src/styles/longscroll.css">
+</head>
+<body>
+    <!-- Fixed Navigation -->
+    <nav class="fixed-nav">
+        <div class="nav-wrapper">
+            <div class="nav-left">
+                <button class="hamburger" id="hamburgerBtn">☰</button>
+                <ul class="dropdown-menu" id="dropdownMenu">
+                    <li><a href="about.html">소개</a></li>
+                    <li><a href="brand.html" class="brand-menu">BRANDS</a></li>
+                    <li><a href="junior.html">주니어패션위크(Junior Fashion Week)</a></li>
+                    <li><a href="#contact">문의</a></li>
+                </ul>
+            </div>
+            <div class="nav-center">
+                <a href="index.html" class="nav-logo">BITGOEUL</a>
+            </div>
+            <div class="nav-right">
+                <span class="scroll-indicator">Scroll</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section 1: Hero -->
+    <section class="scroll-section hero-section" data-section="1">
+        <div class="section-content">
+            <div class="hero-text">
+                <span class="hero-subtitle">2025 COLLECTION</span>
+                <h1 class="hero-title">
+                    <span class="line">BITGOEUL</span>
+                    <span class="line">FASHION</span>
+                    <span class="line">WEEK</span>
+                </h1>
+                <p class="hero-description">Where tradition meets innovation</p>
+            </div>
+            <div class="hero-image">
+                <img src="src/assets/images/index/LOGO.png" alt="BITGOEUL FASHION WEEK">
+            </div>
+        </div>
+        <div class="scroll-hint">
+            <span>↓</span>
+        </div>
+    </section>
+
+    <!-- Section 2: Video Showcase -->
+    <section class="scroll-section video-showcase-section" data-section="2">
+        <div class="section-content">
+            <div class="video-wrapper">
+                <div class="video-container">
+                    <iframe 
+                        src="https://www.youtube.com/embed/NULMYAMMzVg?enablejsapi=1&mute=1" 
+                        title="Fashion Week Video" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+            <div class="video-text">
+                <h2>Experience the Show</h2>
+                <p>빛고을 패션위크의 하이라이트를 영상으로 만나보세요</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Designer BACO -->
+    <section class="scroll-section designer-section" data-section="3">
+        <div class="split-layout">
+            <div class="split-image">
+                <img src="src/assets/images/index/main-baco.jpg" alt="BACO92">
+            </div>
+            <div class="split-content">
+                <span class="section-number">01</span>
+                <h2>BACO92</h2>
+                <p>도시적 감성과 스트리트 문화가 만나는 지점. 일상에서 발견하는 특별함을 담아낸 컬렉션.</p>
+                <a href="baco.html" class="explore-link">Explore Collection →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Designer BIANCA -->
+    <section class="scroll-section designer-section reverse" data-section="4">
+        <div class="split-layout">
+            <div class="split-content">
+                <span class="section-number">02</span>
+                <h2>BIANCA NG</h2>
+                <p>전통과 현대를 넘나드는 독창적인 디자인 철학. 경계를 허무는 새로운 패션 언어.</p>
+                <a href="biancaNg.html" class="explore-link">Explore Collection →</a>
+            </div>
+            <div class="split-image">
+                <img src="src/assets/images/index/main-bianca.jpg" alt="Bianca Ng">
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Designer LE BAO -->
+    <section class="scroll-section designer-section" data-section="5">
+        <div class="split-layout">
+            <div class="split-image">
+                <img src="src/assets/images/index/main-lebao.jpg" alt="Le Bao">
+            </div>
+            <div class="split-content">
+                <span class="section-number">03</span>
+                <h2>LE BAO</h2>
+                <p>동양적 미학의 현대적 재해석. 섬세한 디테일과 우아한 실루엣의 조화.</p>
+                <a href="leBao.html" class="explore-link">Explore Collection →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Designer DAISY -->
+    <section class="scroll-section designer-section reverse" data-section="6">
+        <div class="split-layout">
+            <div class="split-content">
+                <span class="section-number">04</span>
+                <h2>SOH DAISY</h2>
+                <p>자연에서 영감을 받은 유기적인 형태. 부드러움과 강인함이 공존하는 디자인.</p>
+                <a href="daisy.html" class="explore-link">Explore Collection →</a>
+            </div>
+            <div class="split-image">
+                <img src="src/assets/images/index/main-daisy.jpg" alt="SOH Daisy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Designer THE SOUL -->
+    <section class="scroll-section designer-section" data-section="7">
+        <div class="split-layout">
+            <div class="split-image">
+                <img src="src/assets/images/index/main-Thesoulfw.jpg" alt="The Soul">
+            </div>
+            <div class="split-content">
+                <span class="section-number">05</span>
+                <h2>THE SOUL</h2>
+                <p>내면의 목소리를 담은 아방가르드. 예술과 패션의 경계를 넘나드는 실험적 접근.</p>
+                <a href="theSoulfw.html" class="explore-link">Explore Collection →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 8: Gallery Grid -->
+    <section class="scroll-section gallery-section" data-section="8">
+        <div class="section-header">
+            <h2>Collection Gallery</h2>
+            <p>Discover the full range of our designers' creativity</p>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item tall">
+                <img src="src/assets/images/designers/bianca/Look1.JPG" alt="Gallery 1">
+                <div class="gallery-overlay">
+                    <span>Bianca Ng</span>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="src/assets/images/designers/baco/Baco92_byMacami-2.jpg" alt="Gallery 2">
+                <div class="gallery-overlay">
+                    <span>BACO92</span>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="src/assets/images/designers/daisy/SOH_LOOK_3.jpg" alt="Gallery 3">
+                <div class="gallery-overlay">
+                    <span>SOH Daisy</span>
+                </div>
+            </div>
+            <div class="gallery-item wide">
+                <img src="src/assets/images/designers/leBao/look5.jpg" alt="Gallery 4">
+                <div class="gallery-overlay">
+                    <span>Le Bao</span>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="src/assets/images/designers/baco/Baco92_byMacami-5.jpg" alt="Gallery 5">
+                <div class="gallery-overlay">
+                    <span>BACO92</span>
+                </div>
+            </div>
+            <div class="gallery-item tall">
+                <img src="src/assets/images/designers/bianca/Look7.jpg" alt="Gallery 6">
+                <div class="gallery-overlay">
+                    <span>Bianca Ng</span>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="src/assets/images/designers/daisy/SOH_LOOK_5.jpg" alt="Gallery 7">
+                <div class="gallery-overlay">
+                    <span>SOH Daisy</span>
+                </div>
+            </div>
+            <div class="gallery-item wide">
+                <img src="src/assets/images/designers/leBao/look8.jpg" alt="Gallery 8">
+                <div class="gallery-overlay">
+                    <span>Le Bao</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 9: Contact -->
+    <section class="scroll-section contact-section" data-section="9" id="contact">
+        <div class="contact-wrapper">
+            <div class="contact-header">
+                <h2>Get in Touch</h2>
+                <p>당신의 이야기를 들려주세요</p>
+            </div>
+            <div class="contact-form-wrapper">
+                <form action="https://formspree.io/f/xnnzybrr" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="brand" placeholder="브랜드명 (Brand Name)" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="이메일 주소 (Email address)" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="하실 말씀 (Your message)" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2025 Bitgoeul Fashion Week – All rights reserved.</p>
+        </footer>
+    </section>
+
+    <!-- Scripts -->
+    <script src="src/scripts/components/navigation.js"></script>
+    <script src="src/scripts/longscroll.js"></script>
+</body>
+</html>
