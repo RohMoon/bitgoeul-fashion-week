@@ -1,0 +1,52 @@
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+.idea_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+*.swp
+*~
+
+# Build directories
+dist/
+build/
+node_modules/
+
+# Office temp files
+~$*
+*.tmp
+*.docx
+
+# Large video files
+0824.mp4
+*.mp4
+
+# Video/Image cache
+*.cache
+.cache/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# VS Code
+.vscode/
+
+# Package files
+*.zip
+*.rar
+*.7z
+*.tar
+*.gz

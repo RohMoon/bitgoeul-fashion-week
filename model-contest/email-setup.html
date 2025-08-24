@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이메일 폼 설정 - 빛고을 패션위크</title>
+    
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            padding: 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .setup-section {
+            margin-bottom: 40px;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+        
+        .setup-section h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+        
+        .step {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .step-number {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background: #667eea;
+            color: white;
+            text-align: center;
+            line-height: 30px;
+            border-radius: 50%;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        
+        code {
+            background: #f1f3f5;
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: #e83e8c;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .code-block {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+        }
+        
+        .test-form {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        .alert {
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .alert-success {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+        }
+        
+        .alert-error {
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+        }
+        
+        .alert-info {
+            background: #d1ecf1;
+            border: 1px solid #bee5eb;
+            color: #0c5460;
+        }
+        
+        .highlight {
+            background: #fff3cd;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+        
+        .option-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .option-card {
+            padding: 20px;
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            transition: all 0.3s;
+        }
+        
+        .option-card:hover {
+            border-color: #667eea;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+        }
+        
+        .option-card h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .option-card .pros {
+            color: #28a745;
+            margin: 10px 0;
+        }
+        
+        .option-card .cons {
+            color: #dc3545;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📧 모델 콘테스트 이메일 폼 설정 가이드</h1>
+        
+        <div class="alert alert-info">
+            <strong>💡 안내:</strong> 이 페이지는 참가 신청 폼을 이메일로 받기 위한 설정 가이드입니다.
+            파일 첨부를 포함한 완전한 이메일 폼 기능을 제공합니다.
+        </div>
+
+        <!-- 옵션 선택 섹션 -->
+        <div class="setup-section">
+            <h2>📌 이메일 전송 방법 선택</h2>
+            
+            <div class="option-cards">
+                <div class="option-card">
+                    <h3>옵션 1: EmailJS (추천)</h3>
+                    <p><strong>특징:</strong> 무료 티어 제공, 간단한 설정</p>
+                    <div class="pros">✅ 장점: 서버 불필요, 파일 첨부 가능, 빠른 설정</div>
+                    <div class="cons">❌ 단점: 월 200건 제한 (무료)</div>
+                </div>
+                
+                <div class="option-card">
+                    <h3>옵션 2: Formspree</h3>
+                    <p><strong>특징:</strong> 폼 전용 서비스</p>
+                    <div class="pros">✅ 장점: 매우 간단, 스팸 필터링</div>
+                    <div class="cons">❌ 단점: 월 50건 제한, 파일 첨부 유료</div>
+                </div>
+                
+                <div class="option-card">
+                    <h3>옵션 3: Google Forms</h3>
+                    <p><strong>특징:</strong> Google 서비스 연동</p>
+                    <div class="pros">✅ 장점: 완전 무료, 무제한</div>
+                    <div class="cons">❌ 단점: 커스터마이징 제한</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- EmailJS 설정 가이드 -->
+        <div class="setup-section">
+            <h2>🚀 EmailJS 설정 방법 (추천)</h2>
+            
+            <div class="step">
+                <span class="step-number">1</span>
+                <strong>EmailJS 가입</strong>
+                <p>1. <a href="https://www.emailjs.com" target="_blank">EmailJS.com</a> 접속</p>
+                <p>2. 무료 계정 생성 (Sign Up Free)</p>
+            </div>
+            
+            <div class="step">
+                <span class="step-number">2</span>
+                <strong>이메일 서비스 연결</strong>
+                <p>1. Dashboard → Email Services → Add New Service</p>
+                <p>2. Gmail 선택 → Connect Account</p>
+                <p>3. Google 계정으로 인증</p>
+            </div>
+            
+            <div class="step">
+                <span class="step-number">3</span>
+                <strong>이메일 템플릿 생성</strong>
+                <p>1. Email Templates → Create New Template</p>
+                <p>2. 아래 템플릿 내용 복사:</p>
+                
+                <div class="code-block">
+Subject: [모델 콘테스트 신청] {{name}} - {{phone}}
+
+새로운 모델 콘테스트 참가 신청이 접수되었습니다.
+
+━━━━━━━━━━━━━━━━━━━━━━━━
+📋 신청자 정보
+━━━━━━━━━━━━━━━━━━━━━━━━
+
+이름: {{name}}
+생년월일: {{birth}}
+연락처: {{phone}}
+이메일: {{email}}
+신장: {{height}}cm
+경력: {{experience}}
+
+포트폴리오: {{portfolio}}
+
+━━━━━━━━━━━━━━━━━━━━━━━━
+💬 지원동기
+━━━━━━━━━━━━━━━━━━━━━━━━
+
+{{motivation}}
+
+━━━━━━━━━━━━━━━━━━━━━━━━
+📎 첨부파일
+━━━━━━━━━━━━━━━━━━━━━━━━
+
+{{attachment}}
+
+━━━━━━━━━━━━━━━━━━━━━━━━
+
+신청 일시: {{date}}
+IP 주소: {{ip_address}}
+                </div>
+            </div>
+            
+            <div class="step">
+                <span class="step-number">4</span>
+                <strong>API 키 복사</strong>
+                <p>1. Account → API Keys에서 Public Key 복사</p>
+                <p>2. 아래 코드의 <code>YOUR_PUBLIC_KEY</code> 부분에 붙여넣기</p>
+            </div>
+        </div>
+
+        <!-- 구현 코드 -->
+        <div class="setup-section">
+            <h2>💻 구현 코드</h2>
+            
+            <p>index.html 파일의 <code>&lt;/body&gt;</code> 태그 직전에 추가:</p>
+            
+            <div class="code-block">
+&lt;!-- EmailJS SDK --&gt;
+&lt;script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"&gt;&lt;/script&gt;
+
+&lt;script type="text/javascript"&gt;
+    // EmailJS 초기화
+    (function() {
+        emailjs.init("YOUR_PUBLIC_KEY"); // 여기에 Public Key 입력
+    })();
+
+    // 폼 제출 처리
+    document.getElementById('applicationForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // 제출 버튼 비활성화
+        const submitBtn = this.querySelector('.submit-btn');
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = '전송 중...';
+        submitBtn.disabled = true;
+        
+        // 폼 데이터 수집
+        const formData = {
+            name: document.getElementById('name').value,
+            birth: document.getElementById('birth').value,
+            phone: document.getElementById('phone').value,
+            email: document.getElementById('email').value,
+            height: document.getElementById('height').value,
+            experience: document.getElementById('experience').value,
+            portfolio: document.getElementById('portfolio').value || '없음',
+            motivation: document.getElementById('motivation').value || '없음',
+            date: new Date().toLocaleString('ko-KR'),
+            ip_address: 'Web Form'
+        };
+        
+        // 파일 첨부 처리 (선택사항)
+        const fileInput = document.getElementById('portfolioFile');
+        if (fileInput && fileInput.files[0]) {
+            const file = fileInput.files[0];
+            formData.attachment = `파일명: ${file.name} (크기: ${(file.size/1024).toFixed(2)}KB)`;
+        } else {
+            formData.attachment = '첨부파일 없음';
+        }
+        
+        // EmailJS로 전송
+        emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formData)
+            .then(function(response) {
+                alert('신청이 완료되었습니다! 빠른 시일 내에 연락드리겠습니다.');
+                document.getElementById('applicationForm').reset();
+            })
+            .catch(function(error) {
+                alert('전송 중 오류가 발생했습니다. 다시 시도해주세요.');
+                console.error('EmailJS Error:', error);
+            })
+            .finally(function() {
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            });
+    });
+&lt;/script&gt;
+            </div>
+        </div>
+
+        <!-- 파일 첨부 기능 추가 -->
+        <div class="setup-section">
+            <h2>📎 파일 첨부 기능 추가 (선택사항)</h2>
+            
+            <p>폼에 파일 업로드 필드 추가:</p>
+            
+            <div class="code-block">
+&lt;div class="form-group"&gt;
+    &lt;label for="portfolioFile"&gt;포트폴리오 파일 (PDF, JPG, PNG - 최대 5MB)&lt;/label&gt;
+    &lt;input type="file" 
+           id="portfolioFile" 
+           name="portfolioFile" 
+           accept=".pdf,.jpg,.jpeg,.png"
+           onchange="validateFile(this)"&gt;
+    &lt;small style="color: #666;"&gt;프로필 사진이나 포트폴리오를 첨부해주세요&lt;/small&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+function validateFile(input) {
+    const file = input.files[0];
+    const maxSize = 5 * 1024 * 1024; // 5MB
+    
+    if (file && file.size > maxSize) {
+        alert('파일 크기는 5MB를 초과할 수 없습니다.');
+        input.value = '';
+        return false;
+    }
+    
+    const allowedTypes = ['application/pdf', 'image/jpeg', 'image/png'];
+    if (file && !allowedTypes.includes(file.type)) {
+        alert('PDF, JPG, PNG 파일만 업로드 가능합니다.');
+        input.value = '';
+        return false;
+    }
+    
+    return true;
+}
+&lt;/script&gt;
+            </div>
+        </div>
+
+        <!-- 테스트 폼 -->
+        <div class="setup-section">
+            <h2>🧪 테스트 폼</h2>
+            
+            <div class="test-form">
+                <form id="testForm">
+                    <div class="form-group">
+                        <label for="testName">이름</label>
+                        <input type="text" id="testName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="testEmail">이메일</label>
+                        <input type="email" id="testEmail" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="testPhone">연락처</label>
+                        <input type="tel" id="testPhone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="testMessage">메시지</label>
+                        <textarea id="testMessage" rows="4"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="testFile">파일 첨부 테스트</label>
+                        <input type="file" id="testFile" accept=".pdf,.jpg,.png">
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">테스트 전송</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- 대체 방법들 -->
+        <div class="setup-section">
+            <h2>🔄 대체 방법</h2>
+            
+            <div class="step">
+                <strong>방법 1: Formspree (간단)</strong>
+                <div class="code-block">
+&lt;form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" enctype="multipart/form-data"&gt;
+    &lt;input type="text" name="name" required&gt;
+    &lt;input type="email" name="email" required&gt;
+    &lt;input type="file" name="upload"&gt;
+    &lt;button type="submit"&gt;전송&lt;/button&gt;
+&lt;/form&gt;
+                </div>
+            </div>
+            
+            <div class="step">
+                <strong>방법 2: Google Forms 임베드</strong>
+                <p>1. Google Forms에서 폼 생성</p>
+                <p>2. 보내기 → 임베드 HTML 복사</p>
+                <p>3. 웹사이트에 iframe으로 삽입</p>
+            </div>
+            
+            <div class="step">
+                <strong>방법 3: Netlify Forms (Netlify 호스팅 시)</strong>
+                <div class="code-block">
+&lt;form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field"&gt;
+    &lt;input type="hidden" name="form-name" value="contact"&gt;
+    &lt;input type="text" name="name"&gt;
+    &lt;input type="email" name="email"&gt;
+    &lt;button type="submit"&gt;전송&lt;/button&gt;
+&lt;/form&gt;
+                </div>
+            </div>
+        </div>
+
+        <!-- 보안 고려사항 -->
+        <div class="setup-section">
+            <h2>🔒 보안 고려사항</h2>
+            
+            <div class="alert alert-info">
+                <strong>중요:</strong> API 키는 절대 GitHub 등에 공개하지 마세요!
+            </div>
+            
+            <ul style="line-height: 2;">
+                <li>✅ 스팸 방지를 위한 reCAPTCHA 추가 권장</li>
+                <li>✅ 파일 크기 및 형식 제한 필수</li>
+                <li>✅ 클라이언트 측 + 서버 측 유효성 검사</li>
+                <li>✅ HTTPS 사용 필수</li>
+                <li>✅ 개인정보 처리방침 명시</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // 테스트 폼 핸들러
+        document.getElementById('testForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('테스트 전송 완료! 실제 구현 시 EmailJS 설정을 완료해주세요.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
