@@ -84,6 +84,11 @@ body {
     transition: filter 0.5s ease;
 }
 
+/* 특정 디자이너 페이지의 이미지 위치 조정 */
+.hero-image-adjust img {
+    object-position: center top; /* 이미지 상단 부분을 보이게 */
+}
+
 .hero-image-container:hover img {
     filter: grayscale(0%);
 }

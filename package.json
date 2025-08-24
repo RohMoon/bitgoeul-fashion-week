@@ -2,7 +2,7 @@
   "name": "bitgoeul-fashion-week",
   "version": "1.0.0",
   "description": "Bitgoeul Fashion Week 2025 - Designer Showcase Website",
-  "main": "index.html",
+  "main": "index-old.html",
   "scripts": {
     "dev": "live-server --port=3000 --open=index.html",
     "build": "npm run build:css && npm run build:js",
