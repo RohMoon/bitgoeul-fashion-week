@@ -409,6 +409,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            object-position: center top;
             transition: transform 0.5s ease;
         }
 
@@ -990,6 +991,14 @@
             }
         }
         
+        .mobile-br { display: none; }
+        .mobile-block { display: inline; }
+        
+        @media (max-width: 768px) {
+            .mobile-br { display: inline; }
+            .mobile-block { display: block; }
+        }
+        
         /* 세로 모드 모바일 특별 처리 */
         @media (max-width: 768px) and (orientation: portrait) {
             #hero-video iframe {
@@ -1117,7 +1126,7 @@
             <div class="info-item">
                 <div class="info-icon">👥</div>
                 <h4>참가자격</h4>
-                <p>전 연령 대상 (만 5세 이상)<br>아마추어 및 기성 모델</p>
+                <p>• 전 연령 대상 (만 5세 - 전 연령층)<br>• 모델을 꿈꾸는 아마추어 모델, 기성 모델</p>
             </div>
             <div class="info-item">
                 <div class="info-icon">🏆</div>
@@ -1142,7 +1151,7 @@
             <div class="timeline-item">
                 <div class="timeline-number">2</div>
                 <h4>사전 심사</h4>
-                <p>10/4(토) 필수 참석</p>
+                <p>10/4(토)<br class="mobile-br"><span class="mobile-block">필수 참석</span></p>
             </div>
             <div class="timeline-item">
                 <div class="timeline-number">3</div>
@@ -1203,11 +1212,95 @@
                     <p>Magazine Style</p>
                 </div>
             </div>
+            <div class="gallery-item">
+                <img src="dynamism/_B.thelabel.JPG" alt="Fashion Model 7">
+                <div class="gallery-overlay">
+                    <h4>B.TheLabel Collection</h4>
+                    <p>Designer Fashion</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="dynamism/_Bthelabel2A.jpg" alt="Fashion Model 8">
+                <div class="gallery-overlay">
+                    <h4>Avant-garde Style</h4>
+                    <p>Contemporary Fashion</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="dynamism/B.TheLabel L4J.jpg" alt="Fashion Model 9">
+                <div class="gallery-overlay">
+                    <h4>Runway Collection</h4>
+                    <p>B.TheLabel Design</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="dynamism/IMG_0186.JPG" alt="Fashion Model 10">
+                <div class="gallery-overlay">
+                    <h4>Fashion Portrait</h4>
+                    <p>Model Photography</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="dynamism/IMG_0998.JPG" alt="Fashion Model 11">
+                <div class="gallery-overlay">
+                    <h4>Contemporary Look</h4>
+                    <p>Fashion Style</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="dynamism/IMG_1008.JPG" alt="Fashion Model 12">
+                <div class="gallery-overlay">
+                    <h4>Modern Fashion</h4>
+                    <p>Artistic Expression</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="dynamism/IMG_1892.JPG" alt="Fashion Model 13">
+                <div class="gallery-overlay">
+                    <h4>Fashion Statement</h4>
+                    <p>Bold Style</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="dynamism/IMG_1917.JPG" alt="Fashion Model 14">
+                <div class="gallery-overlay">
+                    <h4>Elegant Pose</h4>
+                    <p>Classic Beauty</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="dynamism/IMG_1924.JPG" alt="Fashion Model 15">
+                <div class="gallery-overlay">
+                    <h4>Fashion Forward</h4>
+                    <p>Trendsetting Style</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="dynamism/IMG_1973.JPG" alt="Fashion Model 16">
+                <div class="gallery-overlay">
+                    <h4>Creative Fashion</h4>
+                    <p>Artistic Vision</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="dynamism/IMG_1980.JPG" alt="Fashion Model 17">
+                <div class="gallery-overlay">
+                    <h4>Runway Ready</h4>
+                    <p>Professional Model</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="dynamism/IMG_1987.JPG" alt="Fashion Model 18">
+                <div class="gallery-overlay">
+                    <h4>High Fashion</h4>
+                    <p>Editorial Excellence</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- 참가 신청 섹션 -->
-    <section id="apply" class="application-form" style="background: #f8f8f8; padding: 80px 5%;">
+    <section id="apply" style="background: #f8f8f8; padding: 80px 5% 100px 5%; overflow: visible; margin-bottom: 0;">
         <div style="text-align: center; max-width: 800px; margin: 0 auto;">
             <h2 class="section-title" style="color: #1a1a1a;">참가신청</h2>
             <p style="color: #666; font-size: 1.2rem; margin-bottom: 3rem;">
@@ -1221,7 +1314,7 @@
                onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(201, 169, 97, 0.3)'">
                 📝 참가 신청하기
             </a>
-            <p style="color: #666; margin-top: 2rem; font-size: 0.95rem;">
+            <p style="color: #666; margin-top: 2rem; font-size: 0.95rem; margin-bottom: 0;">
                 ※ 네이버 폼으로 이동합니다<br>
                 문의: 010-4687-7082 / 010-3881-4170
             </p>
@@ -1288,7 +1381,13 @@
         const sliderImages = [
             'dynamism/BACO-FASHION-SHOOT-160.jpg',
             'dynamism/BACO-FASHION-SHOOT-344.jpg',
-            'dynamism/JNY_8583.jpg'
+            'dynamism/JNY_8583.jpg',
+            'dynamism/_B.thelabel.JPG',
+            'dynamism/_Bthelabel2A.jpg',
+            'dynamism/B.TheLabel L4J.jpg',
+            'dynamism/IMG_1892.JPG',
+            'dynamism/IMG_1917.JPG',
+            'dynamism/IMG_1973.JPG'
         ];
         let currentSlide = 0;
         const sliderContainer = document.querySelector('.slider-container img');
