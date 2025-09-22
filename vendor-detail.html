@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail - Bitgoeul Fashion Week</title>
+    <link rel="stylesheet" href="src/styles/base/variables.css">
+    <link rel="stylesheet" href="src/styles/base/fonts.css">
+    <link rel="stylesheet" href="src/styles/base/reset.css">
+    <link rel="stylesheet" href="src/styles/vendor-detail.css">
+</head>
+<body>
+    <!-- Fixed Navigation -->
+    <nav class="detail-nav">
+        <div class="nav-wrapper">
+            <a href="vendors.html" class="nav-back">← Back to Products</a>
+            <div class="nav-center">
+                <a href="index.html" class="nav-logo">BITGOEUL FASHION WEEK</a>
+            </div>
+            <div class="nav-actions">
+                <button class="nav-btn cart-btn">
+                    <span>Cart (0)</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Product Detail Section -->
+    <section class="product-detail">
+        <div class="container">
+            <div class="detail-grid">
+                <!-- Product Images -->
+                <div class="product-gallery">
+                    <div class="main-image">
+                        <img id="mainImage" src="src/assets/images/vendors/product1-main.jpg" alt="Product Main">
+                    </div>
+                    <div class="thumbnail-list">
+                        <img src="src/assets/images/vendors/product1-thumb1.jpg" alt="Thumbnail 1" class="thumbnail active" onclick="changeImage(this.src)">
+                        <img src="src/assets/images/vendors/product1-thumb2.jpg" alt="Thumbnail 2" class="thumbnail" onclick="changeImage(this.src)">
+                        <img src="src/assets/images/vendors/product1-thumb3.jpg" alt="Thumbnail 3" class="thumbnail" onclick="changeImage(this.src)">
+                        <img src="src/assets/images/vendors/product1-thumb4.jpg" alt="Thumbnail 4" class="thumbnail" onclick="changeImage(this.src)">
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div class="product-info-detail">
+                    <div class="product-header">
+                        <p class="product-vendor">VENDOR A</p>
+                        <h1 class="product-title">프리미엄 울 코트</h1>
+                        <p class="product-code">Product Code: #BFW2025-001</p>
+                    </div>
+
+                    <div class="product-price-section">
+                        <p class="price-label">Price</p>
+                        <p class="price-value">₩890,000</p>
+                        <p class="price-info">부가세 포함</p>
+                    </div>
+
+                    <div class="product-description">
+                        <h3>제품 설명</h3>
+                        <p>최고급 이탈리아산 울 100%로 제작된 프리미엄 코트입니다. 클래식한 디자인과 현대적인 실루엣이 조화를 이루며, 어떤 스타일링에도 완벽하게 어울립니다.</p>
+                        <ul class="feature-list">
+                            <li>이탈리아산 프리미엄 울 100%</li>
+                            <li>핸드메이드 디테일 마감</li>
+                            <li>클래식 더블 브레스트 디자인</li>
+                            <li>내부 실크 라이닝</li>
+                        </ul>
+                    </div>
+
+                    <div class="product-options">
+                        <div class="option-group">
+                            <label>사이즈</label>
+                            <div class="size-options">
+                                <button class="size-btn">S</button>
+                                <button class="size-btn active">M</button>
+                                <button class="size-btn">L</button>
+                                <button class="size-btn">XL</button>
+                            </div>
+                        </div>
+
+                        <div class="option-group">
+                            <label>색상</label>
+                            <div class="color-options">
+                                <button class="color-btn active" style="background: #000000;" title="Black"></button>
+                                <button class="color-btn" style="background: #8B4513;" title="Brown"></button>
+                                <button class="color-btn" style="background: #2F4F4F;" title="Dark Gray"></button>
+                                <button class="color-btn" style="background: #191970;" title="Navy"></button>
+                            </div>
+                        </div>
+
+                        <div class="option-group">
+                            <label>수량</label>
+                            <div class="quantity-selector">
+                                <button class="qty-btn minus">-</button>
+                                <input type="number" class="qty-input" value="1" min="1" max="10">
+                                <button class="qty-btn plus">+</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button class="btn-primary add-to-cart">장바구니 담기</button>
+                        <button class="btn-secondary buy-now">바로 구매</button>
+                        <button class="btn-icon wishlist">♡</button>
+                    </div>
+
+                    <div class="product-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">배송 정보</span>
+                            <span class="meta-value">무료 배송 (3-5일 소요)</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">반품/교환</span>
+                            <span class="meta-value">구매 후 7일 이내 가능</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">원산지</span>
+                            <span class="meta-value">Made in Italy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Info Tabs -->
+    <section class="product-tabs">
+        <div class="container">
+            <div class="tabs-header">
+                <button class="tab-btn active" data-tab="details">상세 정보</button>
+                <button class="tab-btn" data-tab="sizing">사이즈 가이드</button>
+                <button class="tab-btn" data-tab="care">관리 방법</button>
+                <button class="tab-btn" data-tab="reviews">리뷰 (12)</button>
+            </div>
+
+            <div class="tabs-content">
+                <!-- Details Tab -->
+                <div class="tab-pane active" id="details">
+                    <h3>제품 상세 정보</h3>
+                    <div class="detail-grid-info">
+                        <div class="detail-item">
+                            <span class="detail-label">소재</span>
+                            <span class="detail-value">울 100% (이탈리아산)</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">안감</span>
+                            <span class="detail-value">실크 100%</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">제조국</span>
+                            <span class="detail-value">Italy</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">시즌</span>
+                            <span class="detail-value">FW 2025</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">스타일 넘버</span>
+                            <span class="detail-value">BFW2025-001</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">케어 라벨</span>
+                            <span class="detail-value">드라이클리닝 전용</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sizing Tab -->
+                <div class="tab-pane" id="sizing">
+                    <h3>사이즈 가이드</h3>
+                    <table class="size-table">
+                        <thead>
+                            <tr>
+                                <th>사이즈</th>
+                                <th>어깨 (cm)</th>
+                                <th>가슴 (cm)</th>
+                                <th>소매 (cm)</th>
+                                <th>총장 (cm)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>S</td>
+                                <td>44</td>
+                                <td>104</td>
+                                <td>60</td>
+                                <td>110</td>
+                            </tr>
+                            <tr>
+                                <td>M</td>
+                                <td>46</td>
+                                <td>108</td>
+                                <td>61</td>
+                                <td>112</td>
+                            </tr>
+                            <tr>
+                                <td>L</td>
+                                <td>48</td>
+                                <td>112</td>
+                                <td>62</td>
+                                <td>114</td>
+                            </tr>
+                            <tr>
+                                <td>XL</td>
+                                <td>50</td>
+                                <td>116</td>
+                                <td>63</td>
+                                <td>116</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="size-note">* 실측 사이즈로 1-2cm 오차가 있을 수 있습니다.</p>
+                </div>
+
+                <!-- Care Tab -->
+                <div class="tab-pane" id="care">
+                    <h3>관리 방법</h3>
+                    <div class="care-instructions">
+                        <div class="care-item">
+                            <span class="care-icon">🧺</span>
+                            <p>드라이클리닝 전용</p>
+                        </div>
+                        <div class="care-item">
+                            <span class="care-icon">🌡️</span>
+                            <p>저온 다림질 가능</p>
+                        </div>
+                        <div class="care-item">
+                            <span class="care-icon">☀️</span>
+                            <p>직사광선 피하여 보관</p>
+                        </div>
+                        <div class="care-item">
+                            <span class="care-icon">💧</span>
+                            <p>물세탁 금지</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reviews Tab -->
+                <div class="tab-pane" id="reviews">
+                    <h3>고객 리뷰</h3>
+                    <div class="reviews-summary">
+                        <div class="rating-average">
+                            <span class="rating-score">4.8</span>
+                            <div class="stars">★★★★★</div>
+                            <span class="review-count">12개의 리뷰</span>
+                        </div>
+                    </div>
+                    <div class="review-list">
+                        <div class="review-item">
+                            <div class="review-header">
+                                <span class="reviewer-name">김**</span>
+                                <span class="review-date">2025.01.15</span>
+                            </div>
+                            <div class="review-rating">★★★★★</div>
+                            <p class="review-text">품질이 정말 좋아요. 실제로 보니 더 고급스럽습니다.</p>
+                        </div>
+                        <div class="review-item">
+                            <div class="review-header">
+                                <span class="reviewer-name">이**</span>
+                                <span class="review-date">2025.01.10</span>
+                            </div>
+                            <div class="review-rating">★★★★☆</div>
+                            <p class="review-text">디자인과 핏이 완벽해요. 다만 가격이 조금 부담스럽네요.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="related-products">
+        <div class="container">
+            <h2 class="section-title">관련 상품</h2>
+            <div class="related-grid">
+                <div class="related-item">
+                    <img src="src/assets/images/vendors/related1.jpg" alt="Related Product">
+                    <h4>캐시미어 스카프</h4>
+                    <p class="related-price">₩280,000</p>
+                </div>
+                <div class="related-item">
+                    <img src="src/assets/images/vendors/related2.jpg" alt="Related Product">
+                    <h4>레더 글러브</h4>
+                    <p class="related-price">₩180,000</p>
+                </div>
+                <div class="related-item">
+                    <img src="src/assets/images/vendors/related3.jpg" alt="Related Product">
+                    <h4>울 페도라</h4>
+                    <p class="related-price">₩150,000</p>
+                </div>
+                <div class="related-item">
+                    <img src="src/assets/images/vendors/related4.jpg" alt="Related Product">
+                    <h4>레더 부츠</h4>
+                    <p class="related-price">₩580,000</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="detail-footer">
+        <div class="container">
+            <p>&copy; 2025 Bitgoeul Fashion Week – All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="src/scripts/vendor-detail.js"></script>
+</body>
+</html>

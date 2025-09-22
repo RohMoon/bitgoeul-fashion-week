@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor Products - Bitgoeul Fashion Week</title>
+    <link rel="stylesheet" href="src/styles/base/variables.css">
+    <link rel="stylesheet" href="src/styles/base/fonts.css">
+    <link rel="stylesheet" href="src/styles/base/reset.css">
+    <link rel="stylesheet" href="src/styles/vendors.css">
+</head>
+<body>
+    <!-- Fixed Navigation -->
+    <nav class="vendor-nav">
+        <div class="nav-wrapper">
+            <div class="nav-left">
+                <button class="hamburger" id="hamburgerBtn">☰</button>
+                <ul class="dropdown-menu" id="dropdownMenu">
+                    <li><a href="about-new.html">소개 (About)</a></li>
+                    <li><a href="brands.html">브랜드 (Brands)</a></li>
+                    <li><a href="vendors.html">벤더 (Vendors)</a></li>
+                    <li><a href="junior-new.html">주니어패션위크 (Junior Fashion Week)</a></li>
+                    <li><a href="#contact">문의 (Contact)</a></li>
+                </ul>
+            </div>
+            <div class="nav-center">
+                <a href="index.html" class="nav-logo">BITGOEUL FASHION WEEK</a>
+            </div>
+            <div class="nav-right">
+                <span>VENDOR SHOWCASE</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">VENDOR PRODUCTS</h1>
+            <p class="hero-subtitle">Premium Fashion & Accessories</p>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="filter-wrapper">
+                <button class="filter-btn active" data-filter="all">전체</button>
+                <button class="filter-btn" data-filter="clothing">의류</button>
+                <button class="filter-btn" data-filter="accessories">액세서리</button>
+                <button class="filter-btn" data-filter="shoes">신발</button>
+                <button class="filter-btn" data-filter="bags">가방</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="products-section">
+        <div class="container">
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card" data-category="clothing">
+                    <div class="product-image">
+                        <img src="src/assets/images/vendors/product1.jpg" alt="Premium Coat">
+                        <div class="product-overlay">
+                            <button class="quick-view">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">프리미엄 울 코트</h3>
+                        <p class="product-brand">VENDOR A</p>
+                        <p class="product-price">₩890,000</p>
+                        <a href="vendor-detail.html?id=1" class="product-link">상세보기 →</a>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card" data-category="accessories">
+                    <div class="product-image">
+                        <img src="src/assets/images/vendors/product2.jpg" alt="Luxury Necklace">
+                        <div class="product-overlay">
+                            <button class="quick-view">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">럭셔리 펄 네크리스</h3>
+                        <p class="product-brand">VENDOR B</p>
+                        <p class="product-price">₩450,000</p>
+                        <a href="vendor-detail.html?id=2" class="product-link">상세보기 →</a>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card" data-category="bags">
+                    <div class="product-image">
+                        <img src="src/assets/images/vendors/product3.jpg" alt="Designer Bag">
+                        <div class="product-overlay">
+                            <button class="quick-view">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">디자이너 레더백</h3>
+                        <p class="product-brand">VENDOR C</p>
+                        <p class="product-price">₩1,250,000</p>
+                        <a href="vendor-detail.html?id=3" class="product-link">상세보기 →</a>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card" data-category="shoes">
+                    <div class="product-image">
+                        <img src="src/assets/images/vendors/product4.jpg" alt="Premium Heels">
+                        <div class="product-overlay">
+                            <button class="quick-view">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">프리미엄 하이힐</h3>
+                        <p class="product-brand">VENDOR D</p>
+                        <p class="product-price">₩680,000</p>
+                        <a href="vendor-detail.html?id=4" class="product-link">상세보기 →</a>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card" data-category="clothing">
+                    <div class="product-image">
+                        <img src="src/assets/images/vendors/product5.jpg" alt="Silk Dress">
+                        <div class="product-overlay">
+                            <button class="quick-view">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">실크 이브닝 드레스</h3>
+                        <p class="product-brand">VENDOR E</p>
+                        <p class="product-price">₩1,580,000</p>
+                        <a href="vendor-detail.html?id=5" class="product-link">상세보기 →</a>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card" data-category="accessories">
+                    <div class="product-image">
+                        <img src="src/assets/images/vendors/product6.jpg" alt="Watch">
+                        <div class="product-overlay">
+                            <button class="quick-view">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">럭셔리 워치</h3>
+                        <p class="product-brand">VENDOR F</p>
+                        <p class="product-price">₩2,350,000</p>
+                        <a href="vendor-detail.html?id=6" class="product-link">상세보기 →</a>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="product-card" data-category="clothing">
+                    <div class="product-image">
+                        <img src="src/assets/images/vendors/product7.jpg" alt="Tailored Suit">
+                        <div class="product-overlay">
+                            <button class="quick-view">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">테일러드 수트</h3>
+                        <p class="product-brand">VENDOR G</p>
+                        <p class="product-price">₩1,890,000</p>
+                        <a href="vendor-detail.html?id=7" class="product-link">상세보기 →</a>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="product-card" data-category="bags">
+                    <div class="product-image">
+                        <img src="src/assets/images/vendors/product8.jpg" alt="Clutch">
+                        <div class="product-overlay">
+                            <button class="quick-view">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">이브닝 클러치</h3>
+                        <p class="product-brand">VENDOR H</p>
+                        <p class="product-price">₩380,000</p>
+                        <a href="vendor-detail.html?id=8" class="product-link">상세보기 →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="vendor-footer">
+        <div class="container">
+            <p>&copy; 2025 Bitgoeul Fashion Week – All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="src/scripts/vendors.js"></script>
+</body>
+</html>
